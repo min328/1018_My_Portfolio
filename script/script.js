@@ -1,6 +1,7 @@
 $(function(){
     let slideNum = 1;
     let distance = 0;
+
     $("main#indexMain").on("wheel", function(event) {
         let wheel = event.originalEvent.wheelDelta;
         if(wheel > 0 && slideNum > 0 && distance > 0) {
@@ -18,7 +19,7 @@ $(function(){
             distance += 720;
             console.log("슬라이드 : " + slideNum);
             console.log("거리값 : " + distance);
-        $("html").animate({"scrollTop" : distance}, 500);
+            $("html").animate({"scrollTop" : distance}, 500);
         }
     });
 });
