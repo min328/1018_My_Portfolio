@@ -124,7 +124,7 @@ header#header {
 
 /* main common start */
 main {
-    padding-top: 60px; /* header가 fixed되어 있는 높이 만큼의 영역 */
+    margin-top: 60px; /* header가 fixed되어 있는 높이 만큼의 영역 */
 }
 /* main common end */
 

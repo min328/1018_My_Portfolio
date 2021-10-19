@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>포트폴리오 제작중 / PRODCUT</title>
     <link rel="stylesheet" href="/style/shop_product.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/script/script.js"></script>
 </head>
 <body>
+    <div id="test"></div>
     <header id="header" class="flex">
         <div id="headerLogo">
             <a href="/index.html">계절식탁</a>
         </div> <!-- div#headerLogo -->
         <nav id="headerGnb">
             <ul class="flex">
-                <li><a href="shop/shop.html">Shop</a></li>
+                <li><a href="/shop/shop.html">Shop</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Q&A</a></li>
                 <li><a href="#">Blog</a></li>
@@ -39,10 +42,10 @@
         </div> <!-- div#productInfo -->
         <div id="review">
             <div class="tab flex">
-                <div><a href="">상세정보</a></div>
-                <div><a href="" class="selected">사용후기</a></div>
-                <div><a href="">문의</a></div>
-                <div><a href="">구매안내</a></div>
+                <div class="tab1">상세정보</div>
+                <div class="tab2 selected">사용후기</div>
+                <div class="tab3">문의</div>
+                <div class="tab4">구매안내</div>
             </div>
             <table class="reviewItem">
                 <tbody>
@@ -70,20 +73,20 @@
         </div> <!-- div#review -->
         <div id="qna">
             <div class="tab flex">
-                <div><a href="">상세정보</a></div>
-                <div><a href="">사용후기</a></div>
-                <div><a href="" class="selected">문의</a></div>
-                <div><a href="">구매안내</a></div>
+                <div class="tab1">상세정보</div>
+                <div class="tab2">사용후기</div>
+                <div class="tab3 selected">문의</div>
+                <div class="tab4">구매안내</div>
             </div>
             <div id="qnaList">게시물이 없습니다.</div>
-            <div><button id="qnaBtn" type="button">write</button></div>
+            <div><button id="qnaWriteBtn" type="button">write</button></div>
         </div> <!-- qna -->
         <div id="buyInfo">
             <div class="tab flex">
-                <div><a href="">상세정보</a></div>
-                <div><a href="">사용후기</a></div>
-                <div><a href="">문의</a></div>
-                <div><a href=""  class="selected">구매안내</a></div>
+                <div class="tab1">상세정보</div>
+                <div class="tab2">사용후기</div>
+                <div class="tab3">문의</div>
+                <div class="tab4 selected">구매안내</div>
             </div>
             <p class="title">상품결제정보</p>
             <p>
@@ -125,6 +128,6 @@
             <p>채널톡 또는 customer_center@email.com</p>
         </div> <!-- div#buyInfo -->
     </main> <!-- main#productMain -->
-    <footer id="footer"></footer>
+    <footer id="footer">footer영역</footer>
 </body>
 </html>
