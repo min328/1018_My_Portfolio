@@ -22,21 +22,6 @@ div#temp {
 }
 
 /* etc */
-div#imageIndicator {
-    position: fixed;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-#imageIndicator li {
-    border: 1px solid #000;
-    margin-top: 20px;
-}
-
-#imageIndicator li:first-child {
-    font-weight: bold;
-}
 
 div#chatbotBtn {
     width: 60px;
