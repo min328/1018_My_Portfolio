@@ -1,44 +1,124 @@
 @charset "UTF-8";
 @import url(style_common.css);
 
-/* main#indexMain start */
-
-main#indexMain {
-    border: 1px solid #f88;
+/* style_common.css header, main re-style */
+header#header {
+  background-color: transparent !important;
 }
 
-#indexMain div.mainContent {
-    height: 720px;
-    border: 1px solid #f00;
-    font-size: 40px;
-    line-height: 700px;
-    text-align: center;
+div#headerLogo a {
+  color: #fff;
+}
+
+nav#headerGnb a {
+  color: #fff;
+}
+
+main#indexMain {
+  margin-top: 0 !important;
+}
+
+/* main#indexMain start */
+main#indexMain div.mainContent {
+  height: 721px;
 }
 
 #indexMain div.mainContent div.imageArea {
-    flex: 6;
-    border: 1px solid #80f;
+  height: 720px;
+  width: 70%;
 }
 
 #indexMain div.mainContent div.linkArea {
-    flex: 4;
-    border: 1px solid #8a0d0d;
+  width: 30%;
+  height: 720px;
+  padding-top: 270px;
 }
+
+#indexMain div.mainContent:nth-child(odd) div.linkArea {
+  padding-left: 40px;
+  margin-right: 200px;
+}
+
+#indexMain div.mainContent:nth-child(even) div.linkArea {
+  padding-right: 40px;
+  margin-left: 200px;
+}
+
+#indexMain div.mainContent div.linkArea h2 {
+  margin-bottom: 20px;
+}
+
+#indexMain div.mainContent div.linkArea p {
+  margin-bottom: 20px;
+}
+
+#indexMain div.mainContent div.linkArea div.linkBtn {
+  width: 200px;
+  height: 50px;
+  color: #fff;
+  border: 1px solid #000;
+  background-color: #000;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+#indexMain div.mainContent div.linkArea div.linkBtn:hover {
+  color: #000;
+  background-color: #fff;
+  transition: 1s;
+}
+
+/* 첫번째 슬라이드 */
+#indexMain div.mainContent:nth-child(1) div.imageArea {
+  background-image: url(/images/home_slide_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* 두번째 슬라이드 */
+#indexMain div.mainContent:nth-child(2) div.imageArea {
+  background-image: url(/images/home_slide_2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* 세번째 슬라이드 */
+#indexMain div.mainContent:nth-child(4) div.imageArea {
+  background-image: url(/images/home_slide_4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* 다섯번째 슬라이드 */
+#indexMain div.mainContent:nth-child(5) div.imageArea {
+  background-image: url(/images/home_slide_5.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* 세번째슬라이드 */
+#indexMain div.mainContent:nth-child(3) div.imageArea {
+  background-image: url(/images/home_slide_3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* main#indexMain end */
 
 /* etc. */
 div#imageIndicator {
-    position: fixed;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 #imageIndicator li {
-    border: 1px solid #000;
-    margin-top: 20px;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
 #imageIndicator li:first-child {
-    font-weight: bold;
+  font-weight: bold;
 }

@@ -6,20 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>포트폴리오 제작중 / HOME</title>
     <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="script/script.js"></script>
+    <script src="script/indexScript.js"></script>
 </head>
 <body>
     <div id="wrap">
-        <div id="temp"><span id="scrollTest"></span></div>
+        <!-- etc. line //////////////////////////////// -->
         <div id="imageIndicator">
             <ul>
                 <li>01</li>
                 <li>02</li>
                 <li>03</li>
+                <li>04</li>
+                <li>05</li>
             </ul>
         </div> <!-- div#imageIndicator -->
-        <div id="chatbotBtn">chat</div> <!-- div#chatbotBtn -->
+        <div id="chatbotBtn">
+            <div id="chatAlarm"><span id="chatCount">1</span></div>
+        </div> <!-- div#chatbotBtn -->
+        <div id="chatMessage">
+            <button id="msgClose" type="button">close</button>
+            <div id="message">
+                챗봇 내용 입력예정
+            </div>
+        </div> <!-- div#chatMessage -->
+        <!-- etc. line //////////////////////////////// -->
         <header id="header" class="flex">
             <div id="headerLogo">
                 <a href="index.html">계절식탁</a>
@@ -34,26 +46,81 @@
             </nav> <!-- nav#headerGnb -->
             <nav id="headerLnb">
                 <ul class="flex">
-                    <li><a href=""></a><!-- 마이페이지-로그인 --></li>
-                    <li><a href=""></a><!-- 카트 --></li>
-                    <li><a href=""></a><!-- 검색 --></li>
+                    <li><a href=""><i class="fas fa-user"></i></a><!-- 마이페이지-로그인 --></li>
+                    <li><a href=""><i class="fas fa-shopping-cart"></i></a><!-- 카트 --></li>
+                    <li><a href=""><i class="fas fa-search"></i></a><!-- 검색 --></li>
                 </ul>
             </nav> <!-- nav#headerLnb -->
         </header> <!-- header#header -->
         <main id="indexMain">
             <div class="mainContent flex">
-                <div class="imageArea">이미지 영역1</div>
-                <div class="linkArea">설명 및 링크 영역1</div>
-            </div>
+                <div class="imageArea"><!-- css background-image로 이미지 넣음 --></div>
+                <div class="linkArea">
+                    <h2>사람을 풍요롭게 만드는 식탁</h2>
+                    <p>계절을 따라 싹을 틔우고 <br> 햇살을 받아 영글어진 자연으로 <br> 우리의 삶을 풍요롭게 가꾸어봅시다. </p>
+                    <div class="linkBtn">SEE MORE</div>
+                </div>
+            </div> <!-- mainContent 1 -->
             <div class="mainContent flex">
-                <div class="linkArea">설명 및 링크 영역2</div>
-                <div class="imageArea">이미지 영역2</div>
-            </div>
+                <div class="linkArea">
+                    <h2>진실된 손과 흙으로</h2>
+                    <p>계절식탁은 살아숨쉬는 이 땅을 지켜가겠습니다. <br> 사람과 자연이 오랫동안 공존할 수 있도록 <br> 진정한 유기 농법만을 추구합니다. </p>
+                </div>
+                <div class="imageArea"><!-- css background-image로 이미지 넣음 --></div>
+            </div> <!-- mainContent 2 -->
             <div class="mainContent flex">
-                <div class="imageArea">이미지 영역3</div>
-                <div class="linkArea">설명 및 링크 영역3</div>
-            </div>
+                <div class="imageArea"><!-- css background-image로 이미지 넣음 --></div>
+                <div class="linkArea">
+                    <h2>Autumn and Persimmon</h2>
+                    <p>가을이면 무르익은 감이 떠오르지 않나요? <br> 가을을 바라보며 사는 과수꾼, <br>김진영씨의 이야기를 들려드립니다.</p>
+                    <p style="font-weight: bold;">계절식탁 농부로그 10월호 : 진영 단감</p>
+                    <div class="linkBtn">SEE MORE</div>
+                </div>
+            </div> <!-- mainContent 3 -->
+            <div class="mainContent flex">
+                <div class="linkArea">
+                    <h2>환경을 생각하는<br>여러분을 환영합니다</h2>
+                    <p>계절식탁 판매직영점을 방문하실 때<br>집에서 사용하시던 보관용기, 종이가방 등<br> 재사용 가능한 포장용품을 가져오시고<br> 5%의 추가할인을 적용 받으세요.</p>
+                </div>
+                <div class="imageArea"><!-- css background-image로 이미지 넣음 --></div>
+            </div> <!-- mainContent 4 -->
+            <div class="mainContent flex">
+                <div class="imageArea"><!-- css background-image로 이미지 넣음 --></div>
+                <div class="linkArea">
+                    <h2>Come Together!</h2>
+                    <p>내 공간에서 열심히 키운 작물,<br>또는 그 작물로 정성껏 만든<br>멋진 나만의 작품이 있다면<br>우리 모두 함께 선보일 시간입니다!</p>
+                    <p>당일 원하시는 분에 한하여 행사 수익금을<br>결식아동들에게 기부할 수 있는 이벤트도<br>특별히 마련해 보았습니다 :)</p>
+                    <p style="font-weight: bold;">계절식탁 Flea Market : 매달 마지막주 토요일</p>
+                    <div class="linkBtn">APPLY NOW</div>
+                </div>
+            </div> <!-- mainCotent : 5 -->
         </main> <!-- main#indexMain -->
+        <footer id="footer">
+            <div id="linkLnb" class="flex">
+                <div><a href="">INSTAGRAM</a></div>
+                <div><a href="">Q&A</a></div>
+            </div> <!-- div#linkLnb -->
+            <p id="companyInfo">
+                <span>(주)계절식탁</span>
+                <span>／</span>
+                <span>주소 00000 서울특별시 ○○구 △△로 □□길 1층</span>
+                <span>／</span>
+                <span>사업자등록번호 ###-##-#####</span>
+                <span>／</span>
+                <span>통신판매업신고번호 2021-XXXX-#####</span>
+                <br>
+                <span>고객센터 070-1234-5678 (평일 09:30-18:00)</span>
+                <span>／</span>
+                <span>문의 info@sesonaldining.com</span>
+                <span>／</span>
+                <span> 대표자명 박철수</span>
+                <span>／</span>
+                <span>개인정보처리방침</span>
+                <span>／</span>
+                <span>이용약관</span>
+            </p> <!-- p#companyInfo -->
+            <p id="copyright">&copy; 2021. 계절식탁 All Rights Rserved. (포트폴리오용 가상사이트입니다.)</p> <!-- p#copyright -->
+        </footer> <!-- footer#footer -->
     </div> <!-- div#wrap -->
 </body>
 </html>

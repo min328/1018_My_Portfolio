@@ -1,0 +1,15 @@
+2021-10-20
+- product_qna.html 내의 각종 버튼 관련 jquery 및 새로운 html 생성
+  (상품 상세보기, 상품정보 선택, 목록버튼 페이지 리다이렉트)
+  (상품정보 선택 popup html 완료)
+- 메인페이지 css, jquery 변경
+- 메인페이지 이미지와 내용 삽입
+
+2021-10-19
+- shop.html 상품 목록페이지 마크업
+- product.html 상품 상세페이지 마크업
+  + 해당 페이지 탭버튼과 jquery 작성
+- product_qna.html 상품 상세페이지 내의 질문등록 페이지 마크업
+
+2021-10-18 
+- index.html 마크업 및 해당 페이지 관련 jquery 작성( 스크롤 시에 화면 내용 전환)
