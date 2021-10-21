@@ -83,7 +83,14 @@ main#indexMain div.mainContent {
   background-size: cover;
 }
 
-/* 세번째 슬라이드 */
+/* 세번째슬라이드 */
+#indexMain div.mainContent:nth-child(3) div.imageArea {
+  background-image: url(/images/home_slide_3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* 네번째 슬라이드 */
 #indexMain div.mainContent:nth-child(4) div.imageArea {
   background-image: url(/images/home_slide_4.jpg);
   background-repeat: no-repeat;
@@ -97,12 +104,99 @@ main#indexMain div.mainContent {
   background-size: cover;
 }
 
-/* 세번째슬라이드 */
-#indexMain div.mainContent:nth-child(3) div.imageArea {
-  background-image: url(/images/home_slide_3.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+
+/* 플리마켓 신청 폼 관련 css */
+
+#indexMain div.mainContent:nth-child(5) {
+  overflow: hidden;
 }
+
+#indexMain div.mainContent:nth-child(5) div#fleaApplyForm {
+  position: relative;
+  right: -600px;
+  top: -250px;
+  padding: 10px;
+  line-height: 14px;
+  opacity: 0;
+}
+
+#fleaApplyForm h2 {
+  margin-bottom: 30px !important;
+}
+
+#fleaApplyForm p {
+  margin-bottom: 10px !important;
+  font-size: 12px;
+}
+
+#fleaApplyForm p.important {
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#fleaApplyForm p.noti {
+  color: rgb(50, 14, 97);
+  font-size: 11px;
+  font-weight: bold;
+}
+
+#fleaApplyForm div#notice {
+  padding-top: 10px;
+  border-top: 1px dotted #000;
+  border-bottom: 1px dotted #000;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#fleaApplyForm div.inputBox label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+#fleaApplyForm div.inputBox input {
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: #eee;
+  padding-right: 20px;
+  font-size: 18px;
+  text-align: right;
+}
+
+#fleaApplyForm div.inputBox textarea {
+  width: 100%;
+  height: 100px;
+  outline: none;
+  border: 1px solid #aaa;
+  font-size: 14px;
+  overflow-y: scroll;
+  resize: none;
+}
+
+#fleaApplyForm button {
+  width: 70px;
+  height: 30px;
+  border: 1px solid #000;
+  margin-top: 10px;
+  font-size: 12px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#fleaApplyForm button#applySendBtn {
+  color: #fff;
+  background-color: #000;
+  float: right;
+}
+
+#fleaApplyForm button#applyCancleBtn {
+border: 1px solid #aaa;
+}
+
 
 /* main#indexMain end */
 

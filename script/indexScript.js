@@ -1,5 +1,8 @@
 $(function(){
 
+    /* 
+        index.html 페이지 스크롤 이벤트 시작
+    */
     window.addEventListener("wheel", function(event){
         event.preventDefault();
     }, {passive : false});
@@ -73,7 +76,7 @@ $(function(){
             $("div#headerLogo a").css({"color" : "#000" , "transition" : "0.5s"});
             $("nav#headerGnb a").css({"color" : "#000" , "transition" : "0.5s"});
             $("nav#headerLnb i").css({"color" : "#fff" , "transition" : "0.5s"});
-            $("div#imageIndicator li").eq(slideIdx).css({"color" : "#fff" , "transition" : "0.5s"});
+            $("div#imageIndicator li").css({"color" : "#fff" , "transition" : "0.5s"});
 
         } else if (slideIdx%2 == 0) {
             $("div#headerLogo a").css({"color" : "#fff" , "transition" : "0.5s"});
@@ -107,7 +110,7 @@ $(function(){
             $("div#headerLogo a").css({"color" : "#000" , "transition" : "0.5s"});
             $("nav#headerGnb a").css({"color" : "#000" , "transition" : "0.5s"});
             $("nav#headerLnb i").css({"color" : "#fff" , "transition" : "0.5s"});
-            $("div#imageIndicator li").eq(idx).css({"color" : "#fff" , "transition" : "0.5s"});
+            $("div#imageIndicator li").css({"color" : "#fff" , "transition" : "0.5s"});
             $("html").animate({"scrollTop" : move}, 500);
 
         } else if (idx%2 == 0) {
@@ -121,7 +124,67 @@ $(function(){
         slideIdx = idx; /* slideIdx(스크롤 이벤트랑, 슬라이드 인디케이터 이벤트 함께 쓰는 전역변수) 설정해줘야지 스크롤 이벤트시 충돌 없음 */
     });
 
-    /* 챗봇 close 버튼 */
+    /* 
+        슬라이드 이동 관련 jquery 끝
+    */
+
+    /* 다섯번째 슬라이드, 플리마켓 참여 관련 jquery */
+    /* 참가신청 양식 등장 */
+   $("div#applyFormOpen").click(function(){
+       $("div#aboutFlea").hide();
+       $("div#fleaApplyForm").animate(
+           {"right":"0", "opacity":"1"}
+           , 1000
+       );
+   });
+
+   /* 참가신청 내 신청하기 버튼 클릭시 */
+   $("div#fleaApplyForm button#applySendBtn").click(function(){
+       let partiName = $("input#partiName").val();
+       let partiPhone = $("input#partiPhone").val();
+       let partiEmail = $("input#partiEmail").val();
+       let partiProduct = $("input#partiProduct").val();
+       let confirmMsg = "\n[신청자 정보]"
+                        + "\n성함 : " + partiName
+                        + "\n연락처 : " + partiPhone
+                        + "\n이메일 : " + partiEmail
+                        + "\n참가 품목 : " + partiProduct;
+       let completeMsg = partiName + "님 신청해주셔서 감사드립니다. \n곧 담당자로부터 연락이 있을 예정이오니 잠시만 기다려주세요.\n또한 문의 사항이 있으시다면 아래의 번호로 연락해주십시오.\n070-1111-2222 (평일 오후 1시 ~ 오후 5시)";
+       
+       let check = confirm("아래의 입력하신 정보가 확실하십니까?" + confirmMsg);
+       if(check == false) {
+           /* 플리마켓 신청서의 input 모두 삭제 */
+           $("div#fleaApplyForm input").val("");
+           return;
+        } else {
+            alert(completeMsg);
+            /* 플리마켓 신청서의 input 모두 삭제 */
+            $("div#fleaApplyForm input").val("");
+        }
+        
+        $("div#fleaApplyForm").animate(
+           {"right":"-600", "opacity":"0"}
+           , 1000
+        , function(){
+            $("div#aboutFlea").fadeIn(500);
+        }
+        );
+        
+    });
+    /* 참가신청 내 취소하기 버튼 클릭시 */
+    $("div#fleaApplyForm button#applyCancleBtn").click(function(){
+        /* 플리마켓 신청서의 input 모두 삭제 */
+        $("div#fleaApplyForm input").val("");
+        $("div#fleaApplyForm").animate(
+            {"right":"-600", "opacity":"0"}
+            , 1000
+            , function(){
+                $("div#aboutFlea").fadeIn(500);
+            }
+        );
+   });
+
+    /* 챗봇 버튼 클릭*/
     $("div#chatbotBtn").click(function(){
         $(this).children("div#chatAlarm").hide();
         $(this).css({
@@ -132,6 +195,7 @@ $(function(){
         $("div#chatMessage").delay(500).slideDown();
     });
     
+    /* 챗본 close버튼 클릭 */
     $("div#chatMessage button#msgClose").click(function(){
         $("div#chatMessage").slideUp();
         $("div#chatbotBtn").css({
@@ -141,5 +205,6 @@ $(function(){
         });
         $("div#chatbotBtn").children("div#chatAlarm").show();
     });
+
     
 });

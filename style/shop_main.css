@@ -36,15 +36,11 @@ main#shopMain div#mainTopBg {
 
 #shopMain div#contentsList {
     border: 1px solid #f00;
-}
-
-#contentsList div.listBox {
-    border: 1px solid #00f;
     justify-content: space-evenly;
-    margin-top: 40px;
+    flex-wrap: wrap;
 }
 
-.listBox div.itemBox {
+#contentsList div.itemBox {
     width: 340px;
     border: 1px solid #0f0;
 }
@@ -52,6 +48,7 @@ main#shopMain div#mainTopBg {
 .itemBox div.imgBox {
     width: inherit;
     height: 340px;
+    margin-top: 40px;
 }
 
 .itemBox div.imgBox img {
