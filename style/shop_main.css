@@ -3,7 +3,6 @@
 
 div#headerWrap {
     width: 100%;
-    border: 1px solid #000;
     position: fixed;
     top: 0;
     left: 0;
@@ -14,51 +13,92 @@ div#headerWrap {
 }
 
 #headerWrap div#headerEventBar {
-    padding: 10px;
+    padding: 8px;
     background-color: #000;
 }
 
 #headerEventBar p {
     color: #fff;
     text-align: center;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 /* header reset end */
 
 /* main#shopMain start */
-main#shopMain div#mainTopBg {
-    height: 400px;
-    background-color: #aaa;
-    line-height: 400px;
-    text-align: center;
+main#shopMain {
+    margin-bottom: 50px;
 }
 
-#shopMain div#contentsList {
-    border: 1px solid #f00;
+#shopMain div#mainTopBg {
+    height: 550px;
+    padding-top: 210px;
+    text-align: center;
+    background-image: url(/images/shop_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#mainTopBg p {
+    color: #fff;
+}
+
+#mainTopBg p:nth-child(1) {
+    font-size: 60px;
+}
+
+#mainTopBg p:nth-child(2) {
+    font-size: 30px;
+}
+
+#mainTopBg p:nth-child(3) {
+    font-size: 50px;
+}
+
+main#shopMain div#contentsList {
+    margin-top: 10px;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
 #contentsList div.itemBox {
     width: 340px;
-    border: 1px solid #0f0;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    cursor: pointer;
 }
 
 .itemBox div.imgBox {
     width: inherit;
     height: 340px;
-    margin-top: 40px;
 }
 
 .itemBox div.imgBox img {
     width: inherit;
     height: inherit;
-    border: 1px solid #000;
 }
 
 .itemBox p {
-    font-size: 25px;
     text-align: right;
-    padding-top: 10px;
+}
+
+.itemBox p.title {
+    padding: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.itemBox p.price {
+    text-decoration: line-through;
+    font-size: 18px;
+    line-height: 15px;
+}
+
+.itemBox p.discounted {
+    font-size: 18px;
+}
+
+.itemBox p.price::after,
+.itemBox p.discounted::after {
+    content: "원";
 }

@@ -7,9 +7,50 @@
     <title>포트폴리오 제작중 / SHOP</title>
     <link rel="stylesheet" href="/style/shop_main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/script/commonScript.js"></script>
     <script src="/script/shopScript.js"></script>
 <body>
     <div id="wrap">
+        <div id="chatbotBtn">
+            <div id="chatAlarm"><span id="chatCount">1</span></div>
+        </div> <!-- div#chatbotBtn -->
+        <div id="chatMessage">
+            <span>계절식탁 C/S</span>
+            <span><!-- 온라인 초록색 사인 표시 --></span>
+            <button id="msgClose" type="button">&times;</button>
+            <div id="messageContent">
+                <div class="flex msgBox">
+                    <div id="representIcon">
+                        <span>seoson dining</span>
+                    </div> <!-- div#representImg -->
+                    <div>
+                        <p id="representName">계절식탁</p>
+                        <p>안녕하세요 계절식탁입니다:) </p>
+                        <p>신규회원가입을 하신 경우 무료배송 쿠폰이 증정되고 있습니다.</p>
+                        <p>꼭 확인하시고 이용해보세요!</p>
+                    </div>
+                </div> <!-- div.msgBox -->
+                <div class="flex msgBox">
+                    <div id="representIcon">
+                        <span>seoson dining</span>
+                    </div> <!-- div#representImg -->
+                    <div>
+                        <p id="representName">계절식탁</p>
+                        <p>무엇을 도와드릴까요?</p>
+                        <p>아래 버튼을 통해 궁금한 것들을 해결해보세요!</p>
+                    </div>
+                </div> <!-- div.msgBox -->
+                <div id="faq">
+                    <button class="qnaBtn">주문/결제</button>
+                    <button class="qnaBtn">교환/환불</button>
+                    <button class="qnaBtn">배송문의</button>
+                    <button class="qnaBtn">멤버쉽 혜택</button>
+                    <button class="qnaBtn">친환경지향 포장 혜택</button>
+                    <button class="qnaBtn">자주 묻는 질문</button>
+                    <button class="qnaBtn">상담원연결</button>
+                </div> <!-- div#faq -->
+            </div> <!-- div#messageContent -->
+        </div> <!-- div#chatMessage -->
         <div id="headerWrap">
             <header id="header" class="flex">
                 <div id="headerLogo">
@@ -37,7 +78,9 @@
         </div> <!-- div#headerWrap -->
         <main id="shopMain">
             <div id="mainTopBg">
-                백그라운 이미지가 들어갈 곳
+                <p>가을 제철 상품 NEW 라인업</p>
+                <p>사전 예약 기간 중 특별할인</p>
+                <p>10.24 - 10.19</p>
             </div> <!-- div#mainTopBg -->
             <div id="contentsList" class="flex">
                 <!-- 상품 삽입 영역 -->
@@ -52,8 +95,23 @@
             </div> <!-- div#contentsList -->
         </main> <!-- main#shopMain -->
         <footer id="footer">
-            footer영역
-        </footer>
+            <div id="linkLnb" class="flex">
+                <div><a href="">INSTAGRAM</a></div>
+                <div><a href="">Q&A</a></div>
+            </div> <!-- div#linkLnb -->
+            <p id="companyInfo">
+                <span>(주)계절식탁</span><span>／</span>
+                <span>주소 00000 서울특별시 ○○구 △△로 □□길 1층</span><span>／</span>
+                <span>사업자등록번호 ###-##-#####</span><span>／</span>
+                <span>통신판매업신고번호 2021-XXXX-#####</span><br>
+                <span>고객센터 070-1234-5678 (평일 09:30-18:00)</span><span>／</span>
+                <span>문의 info@sesonaldining.com</span><span>／</span>
+                <span> 대표자명 박철수</span><span>／</span>
+                <span>개인정보처리방침</span><span>／</span>
+                <span>이용약관</span>
+            </p> <!-- p#companyInfo -->
+            <p id="copyright">&copy; 2021. 계절식탁 All Rights Rserved. (포트폴리오용 가상사이트입니다.)</p> <!-- p#copyright -->
+        </footer> <!-- footer#footer -->
     </div> <!-- div#wrap -->
 </body>
 </html>
