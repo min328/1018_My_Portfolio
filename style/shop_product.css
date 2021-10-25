@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url(style_common.css);
 
+
 div#test {
   width: 100px;
   height: 100px;
@@ -11,21 +12,24 @@ div#test {
   left: 0;
   top: 0;
   z-index: 20;
+  display: none;
 }
 
 div#eventBar {
-  padding: 10px;
+  padding: 8px;
   background-color: #000;
 }
 
 #eventBar p {
   color: #fff;
   text-align: center;
+  font-size: 13px;
 }
 
 /* main#productMain start - 상품상세페이지 */
 main#productMain {
   border: 1px solid #000;
+  margin-top: 80px;
 }
 
 #productMain div#productInfo {
@@ -365,7 +369,8 @@ width: 290px;
 }
 
 /* main#qnaMain end - 상품상세페이지 - Q&A페이지 */
-
+/* //////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////// */
 /* main#searchPopUp start - 상품상세페이지 - Q&A페이지 - 상품검색팝업 */
 
 main#searchPopup {
