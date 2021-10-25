@@ -32,7 +32,7 @@ main#shopMain {
 
 #shopMain div#mainTopBg {
     height: 550px;
-    padding-top: 210px;
+    padding-top: 200px;
     text-align: center;
     background-image: url(/images/shop_background.jpg);
     background-repeat: no-repeat;
