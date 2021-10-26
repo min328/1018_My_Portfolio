@@ -1,3 +1,12 @@
+2021-10-26
+-product 페이지 내용 넣기
+-product 페이지 내부 tab버튼 scroll top 위치 값 offset() 메서드 활용으로 변경
+
+2021-10-25
+-shop 메인, jquery 배열로 상품 나열
+-천 단위 표시하기, 30% 할인해서 자동으로 가격 집어 넣기 
+-product 페이지, 상품 수량 변경 가격 변경 완료
+
 2021-10-21
 - footer 작업 완료
 - index페이지 플리마켓 신청폼 관련 css, jquery 작업

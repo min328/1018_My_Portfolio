@@ -25,7 +25,7 @@ $(function(){
             return false;
         } else {
             currentCount = Number(currentCount) + 1;
-            currentCount += '';
+            currentCount += ''; /* string으로 변환 */
             $(this).siblings("input#productCount").val(currentCount);
 
             /* 천단위 콤마 제거 */
@@ -46,6 +46,7 @@ $(function(){
         
         /* 구매수량 변경 */
         if(currentCount <= 1) {
+            alert("최소 구매 갯수는 1개 입니다.");
             return false;
         } else {
             currentCount = Number(currentCount) - 1;
@@ -64,9 +65,9 @@ $(function(){
         }
     });
     
-    /* 상품상세페이지 탭버트 스크롤 기능 */
+    /* 상품상세페이지 탭버튼 스크롤 기능 */
     /* 상세정보 탭 */
-    $("main#productMain div.tab div.tab1").click(function(){
+    $("div.tab div.tab1").click(function(){
         $("html").animate(
             { "scrollTop" : "37"}
             , 500
@@ -74,25 +75,28 @@ $(function(){
     });
 
     /* 사용후기 탭 */
-    $("main#productMain div.tab div.tab2").click(function(){
+    $("div.tab div.tab2").click(function(){
+        let divReview = $("div#review").offset().top;
         $("html").animate(
-            { "scrollTop" : "2035"}
+            { "scrollTop" : (divReview - 60)}
             , 500
-        );
-    });
-
-    /* 문의 탭 */
-    $("main#productMain div.tab div.tab3").click(function(){
+            );
+        });
+        
+        /* 문의 탭 */
+        $("div.tab div.tab3").click(function(){
+        let divQna = $("div#qna").offset().top;
         $("html").animate(
-            { "scrollTop" : "2700"}
+            { "scrollTop" : (divQna - 60)}
             , 500
-        );
-    });
-
-    /* 구매안내 탭 */
-    $("main#productMain div.tab div.tab4").click(function(){
+            );
+        });
+        
+        /* 구매안내 탭 */
+        $("div.tab div.tab4").click(function(){
+        let divBuyInfo = $("div#buyInfo").offset().top;
         $("html").animate(
-            { "scrollTop" : "2985"}
+            { "scrollTop" : (divBuyInfo - 60)}
             , 500
         );
     });
