@@ -2,111 +2,111 @@
 @import url(style_common.css);
 
 div#headerWrap {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 #headerWrap header#header {
-    position: relative;
+  position: relative;
 }
 
 #headerWrap div#headerEventBar {
-    padding: 8px;
-    background-color: #000;
+  padding: 8px;
+  background-color: #000;
 }
 
 #headerEventBar p {
-    color: #fff;
-    text-align: center;
-    font-size: 13px;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
 }
 
 /* header reset end */
 
 /* main#shopMain start */
 main#shopMain {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 #shopMain div#mainTopBg {
-    height: 550px;
-    padding-top: 200px;
-    text-align: center;
-    background-image: url(/images/shop_background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+  height: 550px;
+  padding-top: 200px;
+  text-align: center;
+  background-image: url(/images/shop_background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #mainTopBg p {
-    color: #fff;
+  color: #fff;
 }
 
 #mainTopBg p:nth-child(1) {
-    font-size: 60px;
+  font-size: 60px;
 }
 
 #mainTopBg p:nth-child(2) {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 #mainTopBg p:nth-child(3) {
-    font-size: 50px;
+  font-size: 50px;
 }
 
 main#shopMain div#contentsList {
-    margin-top: 10px;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+  margin-top: 10px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 #contentsList div.itemBox {
-    width: 340px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    cursor: pointer;
+  width: 340px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  cursor: pointer;
 }
 
 .itemBox div.imgBox {
-    width: inherit;
-    height: 340px;
+  width: inherit;
+  height: 340px;
 }
 
 .itemBox div.imgBox img {
-    width: inherit;
-    height: inherit;
+  width: inherit;
+  height: inherit;
 }
 
 .itemBox p {
-    text-align: right;
+  text-align: right;
 }
 
 .itemBox p.title {
-    padding: 10px 0;
-    font-size: 20px;
-    font-weight: bold;
+  padding: 10px 0;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .itemBox p.price {
-    text-decoration: line-through;
-    font-size: 18px;
-    line-height: 15px;
+  text-decoration: line-through;
+  font-size: 18px;
+  line-height: 15px;
 }
 
 .itemBox p.discounted {
-    font-size: 18px;
-    font-weight: bold;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .itemBox span.disPercent {
-    color: #f00;
-    font-size: 16px;
-    font-weight: bold;
-    margin-right: 5px;
+  color: #f00;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 5px;
 }
 
 .itemBox p.price::after,
 .itemBox p.discounted::after {
-    content: "원";
+  content: "원";
 }

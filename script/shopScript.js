@@ -12,13 +12,13 @@ $(function(){
 
         /* 상품 아이템 생성 */
         let productContainer = "<div class=\"itemBox\" data-link=\"product_" + (i+1) + "\">"
-        + "<div class=\"imgBox\">"
-        + "<img src=\"" + imgSrc + "\">"
-        + "</div>"
-        + "<p class=\"title\">"+ title +"</p>"
-        + "<p class=\"price\">"+ price +"</p>"
-        + "<p class=\"discounted\">"+ "<span class=\"disPercent\">30%</span>" +discounted +"</p>"
-        + "</div>";
+                             + "<div class=\"imgBox\">"
+                             + "<img src=\"" + imgSrc + "\">"
+                             + "</div>"
+                             + "<p class=\"title\">"+ title +"</p>"
+                             + "<p class=\"price\">"+ price +"</p>"
+                             + "<p class=\"discounted\">"+ "<span class=\"disPercent\">30%</span>" +discounted +"</p>"
+                             + "</div>";
 
         
         // console.log(productContainer);

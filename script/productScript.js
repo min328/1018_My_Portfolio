@@ -15,7 +15,91 @@ $(function(){
     let nowTotal = discountedPrice;
     $("span#productTotalRes").text(nowTotal);
 
-    /* 수량 + 추가 버튼 */
+    /* 상품후기 목록 불러오기 */
+    let reviewSet = [];
+    /* 제목, 작성자, 작성날짜, 조회수(int), 별점(int), 내용, 이미지 순으로 */
+    reviewSet[0] = ["감 상태가 최상입니다.", "이수지", "2021-11-9", 233, 4, "껍질째 먹는 저희 집에서 안심하고 먹을 수 있는 감이었습니다. 좋은 상품 잘 받았습니다~", "/images/product1/persimmon3.jpg"];
+    reviewSet[1] = ["추천합니다!", "박미래", "2021-11-10", 99, 5, "지인이 추천해서 시켜봤는데 무른거 없이 상태가 다 너무 좋았습니다. 크기도 고르고요~~ 다음에 또 시키겠습니다! 감사합니다.", null];
+    reviewSet[2] = ["감이 아주 잘 익어서 왔어요~", "이가람", "2020-11-10", 105, 5, "생김새도 이쁘고 당도도 아주 좋아서 맛있게 잘 먹었습니다! ^^ ", "/images/product1/persimmon12.jpg"];
+
+    for(i=0; i<reviewSet.length; i++) {
+        let title = reviewSet[i][0];
+        let customer = reviewSet[i][1];
+        customer = customer.substr(0,1) + "**";
+        let date = reviewSet[i][2];
+        let count = reviewSet[i][3];
+        let evaluation = reviewSet[i][4];
+        let evalIcon ="";
+        for(j=0; j<evaluation; j++) {
+            evalIcon += "<i class=\"fas fa-star\"></i>"
+            console.log(evalIcon);
+        }
+        let customerReview = reviewSet[i][5];
+        let reviewImage = reviewSet[i][6];
+        
+        if (reviewImage == null) {
+            let reviewContainer = "<tbody>"
+                                + "<tr>"
+                                + "<td class=\"title\">" + title + "</td>"
+                                + "<td class=\"customer\">" + customer+ "</td>"
+                                + "<td class=\"date\">" + date + "</td>"
+                                + "<td class=\"count\">" + count + "</td>"
+                                + "<td class=\"evaluation\">" + evalIcon + "</td>"
+                                + "</tr>"
+                                + "<tr>"
+                                + "<td class=\"customerReview\" colspan=\"5\">"
+                                + "<p>" + customerReview + "</p>"
+                                + "</td>"
+                                + "</tr>"
+                                + "</tbody>"
+                                $("table#reviewList").append(reviewContainer);
+                                
+        } else {
+            let reviewContainer = "<tbody>"
+                                + "<tr>"
+                                + "<td class=\"title\">" + title + "</td>"
+                                + "<td class=\"customer\">" + customer+ "</td>"
+                                + "<td class=\"date\">" + date + "</td>"
+                                + "<td class=\"count\">" + count + "</td>"
+                                + "<td class=\"evaluation\">" + evalIcon + "</td>"
+                                + "</tr>"
+                                + "<tr>"
+                                + "<td class=\"customerReview\" colspan=\"5\">"
+                                + "<p>" + customerReview + "</p>"
+                                + "<img src=\"" + reviewImage + "\" alt=\"\">"
+                                + "</td>"
+                                + "</tr>"
+                                + "</tbody>"
+                                $("table#reviewList").append(reviewContainer);
+        }
+    }
+
+    /* 상품문의 불러오기 */
+    let qnaSet = [];
+    /* 제목, 작성자, 작성날짜, 조회수(int) 순으로 */
+    qnaSet[0] = ["배송예정일은 언제 입니까?", "김영희", "2021-10-27", 2];
+    qnaSet[1] = ["배송예정일은 언제 입니까?", "이준수", "2021-10-27", 3];
+    qnaSet[2] = ["배송예정일은 언제 입니까?", "박하나", "2021-10-26", 5];
+    qnaSet[3] = ["배송예정일은 언제 입니까?", "오주연", "2021-10-25", 3];
+    qnaSet[4] = ["배송예정일은 언제 입니까?", "이정민", "2021-10-25", 5];
+
+    for(i=0; i<qnaSet.length; i++) {
+        let title = qnaSet[i][0];
+        let customer = qnaSet[i][1];
+        customer = customer.substr(0,1) + "**";
+        let date = qnaSet[i][2];
+        let count = qnaSet[i][3];
+
+        let qnaContainer = "<tr>"
+                        + "<td class=\"title\"><i class=\"fas fa-lock\"></i>" + title + "<span class=\"reply\">[1]</span></td>"
+                        + "<td class=\"customer\">" + customer +"</td>"
+                        + "<td class=\"date\">" + date + "</td>"
+                        + "<td class=\"count\">" + count + "</td>"
+                        + "</tr>"
+        $("table#qnaList tbody").append(qnaContainer);
+    }
+  
+    /* buyOption 수량 + 추가 버튼 */
     $("div#productCounter button#addBtn").click(function(){
         let currentCount = $(this).siblings("input#productCount").val();
 
@@ -40,7 +124,7 @@ $(function(){
         }
     });
     
-    /* 수량 - 빼기 버튼 */
+    /* buyOption 수량 - 빼기 버튼 */
     $("div#productCounter button#subBtn").click(function(){
         let currentCount = $(this).siblings("input#productCount").val();
         
@@ -64,8 +148,14 @@ $(function(){
             $("span#productTotalWeight").text(nowWeight);
         }
     });
+
+    /* button#reviewWriteBtn */
+    $("button#reviewWriteBtn").click(function(){
+        alert("회원에게만 글쓰기 권한이 있습니다.");
+        window.location.href = "/login/login.html";
+    });
     
-    /* 상품상세페이지 탭버튼 스크롤 기능 */
+    /* 상품상세페이지 탭버튼 스크롤 기능 - 브라우저 사이즈에 따라서 상대적 위치가 달라지므로 offset top으로 탭을 클릭 할 때마다 불러와서 움직이도록*/
     /* 상세정보 탭 */
     $("div.tab div.tab1").click(function(){
         $("html").animate(
@@ -101,7 +191,7 @@ $(function(){
         );
     });
 
-    /* product.html qnaWriteBtn클릭시 문의사항 작성페이지로 이동 */
+    /* product.html qnaWriteBtn 클릭시 문의사항 작성페이지로 이동 */
     $("main#productMain button#qnaWriteBtn").click(function(){
         window.location.href = "product_qna.html";
     });

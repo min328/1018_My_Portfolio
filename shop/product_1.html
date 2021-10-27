@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>포트폴리오 제작중 / PRODCUT</title>
     <link rel="stylesheet" href="/style/shop_product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="/script/productScript.js"></script>
 </head>
@@ -114,7 +115,7 @@
                 <div class="tab3">문의</div>
                 <div class="tab4">구매안내</div>
             </div>
-            <table class="reviewItem">
+            <table id="reviewList">
                 <thead>
                     <tr>
                         <td>제목</td>
@@ -124,23 +125,36 @@
                         <td>평점</td>
                     </tr>
                 </thead>
-                <tbody>
+                <!-- 리뷰 내용 들어갈 곳 -->
+                <!-- <tbody>
                     <tr>
                         <td class="title">제목1</td>
                         <td class="customer">김**</td>
                         <td class="date">2021-10-19</td>
                         <td class="count">1</td>
-                        <td>##</td>
+                        <td class="evaluation">##</td>
                     </tr>
                     <tr>
-                        <td colspan="5">
+                        <td class="customerReview" colspan="5">
                             <p>내용</p>
                             <img src="" alt="">
                         </td>
                     </tr>
-                </tbody>
+                </tbody> -->
+                <!-- 리뷰 내용 들어갈 곳 -->
             </table> <!-- table.reviewItem -->
-            <div><button id="reviewWriteBtn" type="button" onclick="alert('회원에게만 글쓰기 권한이 있습니다.')";>write</button></div>
+            <div class="btnArea"><button id="reviewWriteBtn" type="button">write</button></div> <!-- div.btnArea review write button -->
+            <div class="paging">
+                <button type="button">&laquo;</button>
+                <button type="button">&lsaquo;</button>
+                <button type="button" class="selected numBtn">1</button>
+                <button type="button" class="numBtn">2</button>
+                <button type="button" class="numBtn">3</button>
+                <button type="button" class="numBtn">4</button>
+                <button type="button" class="numBtn">5</button>
+                <button type="button">&rsaquo;</button>
+                <button type="button">&raquo;</button>
+            </div> <!-- div.paging -->
         </div> <!-- div#review -->
         <div id="qna">
             <div class="tab flex">
@@ -149,9 +163,37 @@
                 <div class="tab3 selected">문의</div>
                 <div class="tab4">구매안내</div>
             </div>
-            <div id="qnaList">게시물이 없습니다.</div>
-            <div><button id="qnaWriteBtn" type="button">write</button></div>
-        </div> <!-- qna -->
+                <table id="qnaList">
+                    <thead>
+                        <tr>
+                            <td>제목</td>
+                            <td>작성자</td>
+                            <td>작성일</td>
+                            <td>조회수</td>
+                        </tr>
+                    </thead>
+                    <tbody> <!-- 질문사항 들어갈 곳 -->
+                        <!-- <tr>
+                            <td class="title"><i class="fas fa-lock"></i>제목<span class="reply">[1]</span></td>
+                            <td class="customer">작성자</td>
+                            <td class="date">2020</td>
+                            <td class="count">2</td>
+                        </tr> -->
+                    </tbody> <!-- 질문사항 들어갈 곳 -->
+                </table> <!-- table#qnaList -->
+            <div class="btnArea"><button id="qnaWriteBtn" type="button">write</button></div> <!-- div.btnArea qna write button -->
+            <div class="paging">
+                <button type="button">&laquo;</button>
+                <button type="button">&lsaquo;</button>
+                <button type="button" class="selected numBtn">1</button>
+                <button type="button" class="numBtn">2</button>
+                <button type="button" class="numBtn">3</button>
+                <button type="button" class="numBtn">4</button>
+                <button type="button" class="numBtn">5</button>
+                <button type="button">&rsaquo;</button>
+                <button type="button">&raquo;</button>
+            </div> <!-- div.paging -->
+        </div> <!-- div#qna -->
         <div id="buyInfo">
             <div class="tab flex">
                 <div class="tab1">상세정보</div>
