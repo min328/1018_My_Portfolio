@@ -32,7 +32,6 @@ $(function(){
         let evalIcon ="";
         for(j=0; j<evaluation; j++) {
             evalIcon += "<i class=\"fas fa-star\"></i>"
-            console.log(evalIcon);
         }
         let customerReview = reviewSet[i][5];
         let reviewImage = reviewSet[i][6];
@@ -78,10 +77,10 @@ $(function(){
     let qnaSet = [];
     /* 제목, 작성자, 작성날짜, 조회수(int) 순으로 */
     qnaSet[0] = ["배송예정일은 언제 입니까?", "김영희", "2021-10-27", 2];
-    qnaSet[1] = ["배송예정일은 언제 입니까?", "이준수", "2021-10-27", 3];
-    qnaSet[2] = ["배송예정일은 언제 입니까?", "박하나", "2021-10-26", 5];
-    qnaSet[3] = ["배송예정일은 언제 입니까?", "오주연", "2021-10-25", 3];
-    qnaSet[4] = ["배송예정일은 언제 입니까?", "이정민", "2021-10-25", 5];
+    qnaSet[1] = ["당도 몇 브릭스 인지알려주세요.", "이준수", "2021-10-27", 3];
+    qnaSet[2] = ["최대 구매량 이상으로 구매하고 싶습니다...가능한가요?", "박하나", "2021-10-26", 5];
+    qnaSet[3] = ["사전예약후 직영점 방문 가능 여부", "오주연", "2021-10-25", 3];
+    qnaSet[4] = ["작년 리뷰글 참고해도 될까요? 같은 농장 상품인지 궁금합니다.", "이정민", "2021-10-25", 5];
 
     for(i=0; i<qnaSet.length; i++) {
         let title = qnaSet[i][0];
@@ -96,8 +95,27 @@ $(function(){
                         + "<td class=\"date\">" + date + "</td>"
                         + "<td class=\"count\">" + count + "</td>"
                         + "</tr>"
+                        + "<tr class=\"qnaSecu\">"
+                        + "<td colspan=\"4\">"
+                        + "비밀번호 <input type=\"password\"><button class=\"qnaSecuBtn\" type=\"button\">확인</button>"
+                        + "</td>"
+                        + "</tr>"
         $("table#qnaList tbody").append(qnaContainer);
     }
+
+    /* 문의사항 제목 클릭 --> 비밀번호 확인창 생성 */
+    $("div#qna table#qnaList tbody tr td.title").click(function(){
+        $("div#qna table#qnaList tbody tr.qnaSecu").hide();
+        $(this).parent().next().show();
+        // $(this).parent().next().toggle();
+        /* toggle을 썼을 때, 해당 행은 접혔다 펴졌다 가능한데, 다른 행 중에 열려 있는건 그대로 열려 있어서... */
+
+    });
+
+    /* 문의사항 비밀번호 확인창 현재 디폴트 상태(입력불가) */
+    $("#qna table#qnaList tbody tr.qnaSecu td button").click(function(){
+        alert("정확한 비밀번호를 입력해주세요.");
+    });
   
     /* buyOption 수량 + 추가 버튼 */
     $("div#productCounter button#addBtn").click(function(){

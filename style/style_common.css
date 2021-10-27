@@ -67,7 +67,7 @@ nav#headerGnb a {
 
 /* main common start */
 main {
-  margin-top: 60px; /* header가 fixed되어 있는 높이 만큼의 영역 */
+  margin-top: 80px; /* header가 fixed되어 있는 높이 만큼의 영역 */
 }
 /* main common end */
 

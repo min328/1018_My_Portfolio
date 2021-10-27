@@ -251,11 +251,6 @@ main#productMain {
 }
 
 /* tbody css */
-/* 상품후기의 마지막 게시물, 만약 상품후기(tbody에 넣어서) 없을 경우 실행되지 않도록 함 */
-#review table#reviewList tbody:last-child {
-  border-bottom: 1px solid #000;
-}
-
 #review table#reviewList tbody tr:first-child td {
   padding: 10px;
   padding-top: 30px; /* customerReview padding bottom이랑 상관관계  */
@@ -294,6 +289,7 @@ main#productMain {
 #review > div.btnArea {
   height: 50px;
   border: 1px solid #aaa;
+  border-top: 2px solid #000;
   text-align: right;
   line-height: 46px;
 }
@@ -346,11 +342,41 @@ main#productMain {
 
 #qna table#qnaList tbody tr td.title {
   text-align: left;
-  font-size: 18px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 #qna table#qnaList tbody tr td.customer {
   font-size: 16px;
+}
+
+#qna table#qnaList tbody tr.qnaSecu {
+  display: none;
+}
+
+#qna table#qnaList tbody tr.qnaSecu td {
+  padding-left: 32px;
+  background-color: rgba(238, 238, 238, 0.5);
+  text-align: left;
+  font-size: 13px;
+}
+
+#qna table#qnaList tbody tr.qnaSecu td input {
+  width: 100px;
+  padding-left: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+#qna table#qnaList tbody tr.qnaSecu td button {
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 13px;
 }
 
 #qna table#qnaList span.reply {
@@ -362,16 +388,13 @@ main#productMain {
   color: #333;
   margin-left: 10px;
   margin-right: 5px;
-  font-size: 15px;
-}
-
-#qna table#qnaList tbody tr:last-child {
-  border-bottom: 2px solid #000;
+  font-size: 13px;
 }
 
 #qna > div.btnArea {
   height: 50px;
   border: 1px solid #aaa;
+  border-top: 2px solid #000;
   text-align: right;
   line-height: 46px;
 }
