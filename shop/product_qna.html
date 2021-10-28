@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>포트폴리오 제작중 / PRODUCT Q&A</title>
     <link rel="stylesheet" href="/style/shop_product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="/script/productScript.js"></script>
 </head>
@@ -24,18 +26,18 @@
         </nav> <!-- nav#headerGnb -->
         <nav id="headerLnb">
             <ul class="flex">
-                <li><a href=""></a><!-- 마이페이지-로그인 --></li>
-                <li><a href=""></a><!-- 카트 --></li>
-                <li><a href=""></a><!-- 검색 --></li>
+                <li><a href="/login/login.html"><i class="fas fa-user"></i></a><!-- 마이페이지-로그인 --></li>
+                <li><a href=""><i class="fas fa-shopping-cart"></i></a><!-- 카트 --></li>
+                <li><a href=""><i class="fas fa-search"></i></a><!-- 검색 --></li>
             </ul>
         </nav> <!-- nav#headerLnb -->
     </header> <!-- header#header -->
     <main id="qnaMain">
         <div id="productInfo" class="flex">
-            <div id="productImage"><img src="" alt=""></div> <!-- div#productImage -->
+            <div id="productImage"><img src="/images/product_1.jpg" alt="진영단감"></div> <!-- div#productImage -->
             <div id="infoContent">
-                <p class="title" data-code="product_01">상품명</p>
-                <p class="price">가격</p>
+                <p class="title" data-code="product_01">진영 '햇'단감 1.5kg</p>
+                <p class="price">11900 <span id="discounted">할인된 금액으로 넣기(jquery)</span></p>
                 <button id="seeProduct" type="button">상품 상세보기</button>
                 <button id="findProduct" type="button">상품정보선택</button>
             </div> <!-- div#infoContent -->
@@ -51,7 +53,7 @@
         <div id="qnaEmail" class="flex inputItem">
             <div class="col1">이메일</div>
             <div class="col2">
-                <input type="text"><span>@</span><input type="text">
+                <input type="text"><span>@</span><input type="text" readonly>
                 <select id="emailOption">
                     <option value="0">--이메일선택--</option>
                     <option value="1">naver.com</option>
@@ -118,6 +120,23 @@ SNS 간편회원가입
             </div>
         </div>
     </main> <!-- div#qnaMian -->
-    <footer id="footer">footer 영역</footer>
+    <footer id="footer">
+        <div id="linkLnb" class="flex">
+            <div><a href="">INSTAGRAM</a></div>
+            <div><a href="">Q&A</a></div>
+        </div> <!-- div#linkLnb -->
+        <p id="companyInfo">
+            <span>(주)계절식탁</span><span>／</span>
+            <span>주소 00000 서울특별시 ○○구 △△로 □□길 1층</span><span>／</span>
+            <span>사업자등록번호 ###-##-#####</span><span>／</span>
+            <span>통신판매업신고번호 2021-XXXX-#####</span><br>
+            <span>고객센터 070-1234-5678 (평일 09:30-18:00)</span><span>／</span>
+            <span>문의 info@sesonaldining.com</span><span>／</span>
+            <span> 대표자명 박철수</span><span>／</span>
+            <span>개인정보처리방침</span><span>／</span>
+            <span>이용약관</span>
+        </p> <!-- p#companyInfo -->
+        <p id="copyright">&copy; 2021. 계절식탁 All Rights Rserved. (포트폴리오용 가상사이트입니다.)</p> <!-- p#copyright -->
+    </footer> <!-- footer#footer -->
 </body>
 </html>

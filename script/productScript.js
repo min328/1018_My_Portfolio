@@ -209,6 +209,34 @@ $(function(){
         );
     });
 
+    /* 장바구니 팝업 등장 */
+    $("button#addCart").click(function(){
+        $("div#cartPopup").show();
+    });
+
+    $("div#cartPopup button#popCloseBtn, div#cartPopup div#shopOn").click(function(){
+        $("div#cartPopup").hide();
+    });
+
+    /* div#toTop utton appear */
+    $(window).scroll(function(){
+        var scrollValue = $(window).scrollTop();
+        // $("div#toTop").text(scrollValue);
+        if(scrollValue > 500) {
+            $("div#toTop").fadeIn();
+        } else if(scrollValue <= 500) {
+            $("div#toTop").fadeOut();
+        }
+    });
+    
+    /* div#toTop 페이지 위로 이동 */
+    $("div#toTop").click(function(){
+        $("html").animate(
+            { "scrollTop" : 0}
+            , 500
+        );
+    });
+
     /* product.html qnaWriteBtn 클릭시 문의사항 작성페이지로 이동 */
     $("main#productMain button#qnaWriteBtn").click(function(){
         window.location.href = "product_qna.html";
@@ -234,5 +262,7 @@ $(function(){
     $("main#qnaMain button#cancleBtn").click(function(){
         window.history.go(-1);
     });
+
+    
 
 });

@@ -7,7 +7,7 @@ main#qnaMain {
 }
 
 #qnaMain div#productInfo {
-  border: 1px solid #aaa;
+  border: 1px solid #ccc;
   padding: 20px;
   margin-bottom: 40px;
 }
@@ -20,7 +20,6 @@ main#qnaMain {
 #productInfo div#productImage img {
   width: inherit;
   height: inherit;
-  border: 1px solid #000;
 }
 
 #productInfo div#infoContent {
@@ -39,28 +38,29 @@ main#qnaMain {
 }
 
 #productInfo div#infoContent button {
-  padding: 2px 10px;
+  padding: 2px 5px;
+  border-radius: 3px;
   cursor: pointer;
 }
 
 #productInfo div#infoContent button#seeProduct {
   color: #fff;
-  border: 1px solid #777;
+  border: 1px solid #ccc;
   background-color: #777;
 }
 
 #productInfo div#infoContent button#findProduct {
   background-color: #fff;
-  border: 1px solid #777;
+  border: 1px solid #ccc;
 }
 
 #qnaMain div.inputItem {
   border: none;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #ccc;
 }
 
 #qnaMain div.inputItem:nth-child(2) {
-  border-top: 1px solid #aaa;
+  border-top: 3px double #ccc;
 }
 
 #qnaMain div.inputItem div.col1 {
@@ -68,7 +68,7 @@ main#qnaMain {
   padding: 10px;
   padding-left: 20px;
   border: none;
-  border-right: 1px solid #aaa;
+  border-right: 1px solid #ccc;
   font-size: 15px;
   font-weight: bold;
 }
@@ -80,15 +80,16 @@ main#qnaMain {
 #qnaMain div.inputItem div.col2 input[type="text"] {
   height: 35px;
   outline: navajowhite;
-  border: 1px solid #aaa;
+  border: 1px solid #ccc;
   margin: 10px;
   padding-left: 10px;
+  font-weight: bold;
 }
 
 #qnaMain div.inputItem div.col2 textarea {
   width: 800px;
   padding: 10px;
-  border: 1px solid #aaa;
+  border: 1px solid #ccc;
   margin: 10px;
 }
 
@@ -103,13 +104,13 @@ main#qnaMain {
 
 #qnaMain div#qnaEmail div.col2 select#emailOption {
   height: 35px;
-  border: 1px solid #aaa;
+  border: 1px solid #ccc;
   margin-top: 1px;
 }
 /* .inputItem 세부 css조정 */
 
 #qnaMain div#qnaContent {
-  border: 1px solid #aaa;
+  border: 1px solid #ccc;
   border-top: none;
   padding: 5px;
 }
@@ -117,7 +118,7 @@ main#qnaMain {
 #qnaMain #qnaContent div#textEditor {
   height: 40px;
   border: none;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #ccc;
 }
 
 #qnaMain #qnaContent div#inquiry {
