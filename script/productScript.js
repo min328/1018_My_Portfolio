@@ -107,9 +107,6 @@ $(function(){
     $("div#qna table#qnaList tbody tr td.title").click(function(){
         $("div#qna table#qnaList tbody tr.qnaSecu").hide();
         $(this).parent().next().show();
-        // $(this).parent().next().toggle();
-        /* toggle을 썼을 때, 해당 행은 접혔다 펴졌다 가능한데, 다른 행 중에 열려 있는건 그대로 열려 있어서... */
-
     });
 
     /* 문의사항 비밀번호 확인창 현재 디폴트 상태(입력불가) */
@@ -244,8 +241,8 @@ $(function(){
 
     /* product_qna.html 상품상세보기 버튼 */
     $("main#qnaMain button#seeProduct").click(function(){
-        let htmlfile = $(this).siblings("p.title").attr("data-code");
-        window.location.href = htmlfile + ".html";
+        let htmlfile = $(this).prevAll("p.title").attr("data-code") + ".html";
+        window.open(htmlfile, "_blank");
     });
 
     /* product_qna.html 상품정보선택 버튼 - 팝업창 생성 */
@@ -263,6 +260,122 @@ $(function(){
         window.history.go(-1);
     });
 
-    
+    /* product_qna.html 등록버튼 - 경고창 띄우고 이전 페이지로 이동 */
+    $("main#qnaMain button#uploadBtn").click(function(){
+        alert("고객님의 문의가 등록되었습니다.");
+        window.history.go(-1);
+    });
 
+    /* product_qna.html 메일 선택 시, 인풋란에 자동 입력 기능 */
+    $("select#emailOption").change(function(){
+        let optSelected = $(this).val();
+        if(optSelected == 0) {
+            $("input#address2").val("");
+        } else if (optSelected == 1) {
+            $("input#address2").val("naver.com");
+        } else if (optSelected == 2) {
+            $("input#address2").val("daum.net");
+        } else if (optSelected == 3) {
+            $("input#address2").val("gmail.com");
+        } else if (optSelected == 4) {
+            $("input#address2").val("nate.com");
+        } else if (optSelected == 5) {
+            $("input#address2").val("");
+            $("input#address2").attr("readonly", false);
+        }
+    });
+    
+    /* product_qna.html div#qnaAgree radio 선택시 checked 이동 */
+    $("input#agreeFalse").click(function(){
+        $("input#agreeTrue").prop("checked", false);
+        $("input#agreeFalse").prop("checked", true);
+    });
+    $("input#agreeTrue").click(function(){
+        $("input#agreeFalse").prop("checked", false);
+        $("input#agreeTrue").prop("checked", true);
+    });
+
+    /* product_qna.html div#textEditor select 클릭 => 화살표 방향 변경 및, 옵션창 보여주기 */
+    $("div.selectBox div.customSelect").click(function(){
+        /* 1. 모든 ul.selctOpt 안보이게,div.customeSelect 모두 배경색 흰색으로 복구 */
+        $("ul.selectOpt").slideUp();
+        $("div.customSelect").css("background-color", "#fff"); 
+        /* 2. 클릭된 div.customeSelect만 배경색 #eee, 이웃태그의 ul.selectOpt 생성 */
+        $(this).css({"background-color":"#eee", "transition":"0.5s"});
+        let options = $(this).next("ul.selectOpt");
+
+        if(options.css("display") == "none") {
+            /* 3. 만약 ul.selectOpt 가 display:none인 상태이면 슬라이드를 다운. */
+            options.slideDown();
+            $(this).nextAll("span").children("i").removeClass("fa-caret-up");
+            $(this).nextAll("span").children("i").addClass("fa-caret-down");
+
+        } else {
+            /* 4. 만약 ul.selectOpt 가 display:blcok 보여지는 상태라면 슬라이드를 업, 왜냐하면 사용자가 값을 선택하지 않고 단순히 옵션창 클릭을 반복 했을 때에도 슬라이드가 업될 수 있도록. */
+            $(this).nextAll("span").children("i").removeClass("fa-caret-down");
+            $(this).nextAll("span").children("i").addClass("fa-caret-up");
+            options.slideUp();
+            /* 클릭했던 div.customSelect의 배경을 흰색으로 복구 */
+            $(this).css({"background-color":"#fff", "transition":"0.5s"});
+        }
+    });
+
+    /* product_qna.html div#textEditor select 클릭 => 화살표 방향 변경 및, 옵션창 클릭시 선택값으로 표기 변경 */
+    $("ul.selectOpt li").click(function(){
+        /* 1. div.customSelect의 text를 li선택값으로 바꾼다. */
+        let opt = $(this).text();
+        $(this).parent().prev("div.customSelect").children("p").text(opt);
+
+        /* 2. 화살표 방향을 변경, 슬라이드를 올리고, 해당 li의 div.customSelect의 배경을 흰색으로 복구. */
+        $(this).parent().next("span").children("i").removeClass("fa-caret-down");
+        $(this).parent().next("span").children("i").addClass("fa-caret-up");
+        $(this).parent("ul").slideUp();
+        $(this).parent("ul").prev("div.customSelect").css({"background-color":"#fff", "transition":"0.5s"});
+    });
+
+    /* product_qna.html fontType 변경시 질문영역 폰트변경 */
+    $("div#fontType ul li").click(function(){
+        let fontNow = $(this).parent("ul").prev("div").children("p").text();
+        if(fontNow == "Gothic") {
+            $("div#inquiry textarea").css({"font-family" : "'Nanum Gothic', sans-serif"});
+        } else if (fontNow == "Myeongjo") {
+            $("div#inquiry textarea").css({"font-family" : "'Nanum Myeongjo', serif"});
+        } else if (fontNow == "Batang") {
+            $("div#inquiry textarea").css({"font-family" : "'Gowun Batang', serif"});
+        }
+    });
+
+    /* product_qna.html 볼드체, 이탤릭체 등 스타일 변경 아이콘 클릭시 함수 */
+    $("div#iconArea1 div.icon").click(function(){
+        let iconSelected = $(this).hasClass("selected");
+        /* 선택한 텍스트에디터의 아이콘이 선택된 상태인지 확인한다. */
+        if(iconSelected == false) {
+            $(this).addClass("selected");
+            $(this).css({"background-color":"#eee", "transition":"0.2s"});
+            
+        } else if (iconSelected == true) {
+            $(this).removeClass("selected");
+            $(this).css({"background-color":"#fff", "transition":"0.5s"});
+        }
+    });
+    $("div#iconArea3 div.icon").click(function(){
+        let iconSelected = $(this).hasClass("selected");
+        /* 선택한 텍스트에디터의 아이콘이 선택된 상태인지 확인한다. */
+        if(iconSelected == false) {
+            /* div#iconArea3 안에 있는 모든 div.icon 기본상태로 전환 */
+            $("div#iconArea3 div.icon").css({"background-color":"#fff", "transition":"0.5s"});
+            $("div#iconArea3 div.icon").removeClass("selected");
+
+            $(this).addClass("selected");
+            $(this).css({"background-color":"#eee", "transition":"0.2s"});
+            console.log($(this).attr("class"));
+
+        } else if (iconSelected == true) {
+            $(this).removeClass("selected");
+            $(this).css({"background-color":"#fff", "transition":"0.5s"});
+            console.log($(this).attr("class"));
+        }
+    });
+
+    
 });

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(style_common.css);
+@import url(commonStyle.css);
 
 main#loginMain div#loginWrap {
   width: 300px;

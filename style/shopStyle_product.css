@@ -1,6 +1,6 @@
 @charset "UTF-8";
-@import url(style_common.css);
-@import url(shop_product_qna.css);
+@import url(commonStyle.css);
+@import url(shopStyle_product_qna.css);
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
 
 div#eventBar {

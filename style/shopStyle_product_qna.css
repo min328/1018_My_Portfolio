@@ -1,4 +1,10 @@
 @charset "UTF-8";
+/* 나눔 고딕체 */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+/* 나눔 명조체 */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+/* 고원 바탕체 */
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
 
 /* main#qnaMain start - 상품상세페이지 - Q&A페이지 */
 main#qnaMain {
@@ -74,6 +80,7 @@ main#qnaMain {
 }
 
 #qnaMain div.inputItem div.col2 {
+  flex: 1;
   border: none;
 }
 
@@ -91,6 +98,7 @@ main#qnaMain {
   padding: 10px;
   border: 1px solid #ccc;
   margin: 10px;
+  resize: none;
 }
 
 /* .inputItem 세부 css조정 */
@@ -105,6 +113,7 @@ main#qnaMain {
 #qnaMain div#qnaEmail div.col2 select#emailOption {
   height: 35px;
   border: 1px solid #ccc;
+  outline: none;
   margin-top: 1px;
 }
 /* .inputItem 세부 css조정 */
@@ -115,11 +124,90 @@ main#qnaMain {
   padding: 5px;
 }
 
+/* //////////////////////////////////// div#textEditor css */
 #qnaMain #qnaContent div#textEditor {
   height: 40px;
+  padding-top: 2px;
   border: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid rgb(163, 156, 156);
 }
+
+#textEditor div.selectBox {
+  margin-right: 5px;
+  position: relative;
+}
+
+#textEditor div#fontStyle {
+  width: 100px;
+}
+
+#textEditor div#fontType {
+  width: 100px;
+}
+
+#textEditor div#fontSize {
+  width: 65px;
+}
+
+#textEditor div.selectBox div.customSelect {
+  height: 30px;
+  padding: 5px 10px;
+  padding-right: 25px;
+  border-radius: 3px;
+  background-color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#textEditor div.selectBox ul.selectOpt {
+  width: inherit; /* div.selectBox 크기랑 일치하도록 */
+  /*          세로, 가로, blur영역, 퍼지는 정도 */
+  box-shadow: 2px 2px 5px 1px #ccc;
+  background-color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  display: none;
+}
+
+#textEditor div.selectBox ul.selectOpt li {
+  padding: 5px;
+}
+
+/* caret 기호 css */
+#textEditor div.selectBox span {
+  position: absolute;
+  right: 10px;
+  top: 2px;
+  z-index: 10;
+}
+
+#textEditor div.selectBox span i {
+  font-size: 12px;
+}
+/* caret 기호 css */
+
+#textEditor div.icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  margin-right: 5px;
+  background-color: #fff;
+  text-align: center;
+  font-size: 16px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+#textEditor div.icon:hover,
+#textEditor div.selectBox div.customSelect:hover {
+  background-color: #eee;
+  transition: 0.2s;
+}
+
+#textEditor div.selectBox ul.selectOpt li:hover {
+  background-color: #eee;
+}
+/* ////////////////////////////////////////////text editor */
 
 #qnaMain #qnaContent div#inquiry {
   height: 500px;
@@ -131,6 +219,37 @@ main#qnaMain {
   padding: 20px;
   outline: none;
   border: none;
+  resize: none;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+#qnaMain div#qnaSecu div.col2 > div:first-child {
+  padding: 0 10px;
+  padding-top: 10px;
+}
+
+#qnaMain div#qnaSecu div.col2 button#secuRefreshBtn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#qnaMain div#qnaSecu div.col2 i {
+  color: rgb(255, 40, 40);
+  padding: 2px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 10px;
+  position: relative;
+  top: -8px;
+}
+
+
+#qnaMain div#qnaSecu div.col2 span {
+  margin-left: 5px;
+  position: relative;
+  top: -8px;
+  font-size: 12px;
 }
 
 #qnaMain div#qnaAgree div.col2 p {
@@ -139,9 +258,25 @@ main#qnaMain {
   font-size: 14px;
 }
 
+#qnaMain div#qnaAgree div.col2 textarea {
+  width: 70%;
+  outline: none;
+  font-weight: bold;
+  resize: none;
+}
+
 #qnaMain div#buttonArea {
   justify-content: space-between;
   margin: 20px 0;
+}
+
+#qnaMain div#qnaAgree input[type=radio] {
+  margin-left:5px;
+  cursor: pointer;
+}
+
+#qnaMain div#qnaAgree label {
+  cursor: pointer;
 }
 
 #buttonArea button {

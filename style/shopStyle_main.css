@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(style_common.css);
+@import url(commonStyle.css);
 
 div#headerWrap {
   width: 100%;
