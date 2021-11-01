@@ -5,12 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>포트폴리오 제작중 / LOGIN</title>
-    <link rel="stylesheet" href="/style/login.css">
+    <link rel="stylesheet" href="/style/loginStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/script/loginScript.js"></script>
 </head>
 <body>
     <div id="wrap">
+        <div id="temporaryNotice">
+            <p>헤더의 유저아이콘 => 마이페이지</p>
+            <p>단, 로그인을 한 경우에 마이페이지로 넘어 갈 수 있습니다.</p>
+            <p>임시적으로 <b>ID == "1234", Password == "1234"</b>인 경우,<br>마이페이지로 접근가능하게 설정했습니다.</p>
+            <button type="button">close</button>
+        </div>
         <header id="header" class="flex">
             <div id="headerLogo">
                 <a href="/index.html">계절식탁</a>
@@ -18,7 +25,7 @@
             <nav id="headerGnb">
                 <ul class="flex">
                     <li><a href="/shop/shop.html">Shop</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="/about/about.html">About</a></li>
                     <li><a href="#">Q&A</a></li>
                     <li><a href="#">Blog</a></li>
                 </ul>
@@ -35,8 +42,8 @@
             <div id="loginWrap">
                 <p>LOGIN</p>
                 <form>
-                    <input type="text" placeholder="ID">
-                    <input type="password" placeholder="PASSWORD">
+                    <input id="userId" type="text" placeholder="ID">
+                    <input id="userPass" type="password" placeholder="PASSWORD">
                 </form>
                 <button id="loginBtn" type="button">LOG IN</button>
                 <button id="joinBtn" type="button">JOIN US</button>
