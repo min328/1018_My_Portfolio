@@ -106,7 +106,7 @@ $(function(){
     /* 문의사항 제목 클릭 --> 비밀번호 확인창 생성 */
     $("div#qna table#qnaList tbody tr td.title").click(function(){
         $("div#qna table#qnaList tbody tr.qnaSecu").addClass("open");
-        (this).parent().next().toggle().removeClass("open");
+        $(this).parent().next().toggle().removeClass("open");
         $("div#qna table#qnaList tbody tr.open").hide();
     });
 
