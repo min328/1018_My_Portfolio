@@ -129,7 +129,7 @@ main#productMain {
 #productInfo div#buyOption {
   color: #fff;
   width: 650px;
-  height: 850px;
+  height: 750px;
   padding: 0 50px;
   margin-bottom: 100px;
   position: sticky;
@@ -301,6 +301,10 @@ main#productMain {
 
 /* div#review start */
 /* 리뷰내용 테이블 */
+#productMain div#review {
+margin-top: 150px;
+}
+
 #productMain div#review table#reviewList {
   border-collapse: collapse;
 }
