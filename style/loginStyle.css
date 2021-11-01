@@ -156,3 +156,106 @@ main#loginMain div#loginWrap {
 #loginLink div:nth-child(3) a {
   color: #555;
 }
+
+/* 아이디찾기 및 찾기 기능 공통 영역 start */
+div.findArea {
+  width: 420px;
+  height: 500px;
+  padding-top: 20px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  display: none;
+}
+
+.findArea h2 {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.findArea div.infoBox {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.findArea div.infoBox div.col1 {
+  width: 220px;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.findArea div.infoBox div.col2 {
+  width: 100%;
+}
+
+.findArea div.infoBox div.col2 input[type=text] {
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+  outline: none;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+.findArea div.infoBox div.col2 input[type=radio] {
+  margin-left: 10px;
+  margin-right: 5px;
+  position: relative;
+  top: 3px;
+}
+
+.findArea div.infoBox div.col2 input.phone {
+  width: 70px;
+  padding-left: 0;
+  text-align: center;
+}
+
+.findArea div.infoBox div.col2 label {
+  font-size: 12px;
+}
+
+.findArea div.infoBox div.col2 select{
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+  outline: none;
+  border: 1px solid #000;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.findArea div.searchBtn {
+  color: #fff;
+  padding: 10px;
+  border: 1px solid #000;
+  margin-top: 20px;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+}
+
+.findArea div.searchBtn:hover {
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #000;
+  transition: 1s;
+}
+
+.findArea div.hideBtn {
+  padding: 10px;
+  border: 1px solid #aaa;
+  margin-top: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+/* 아이디찾기 및 찾기 기능 공통 영역 end */
+
+div#findOrder input[type=text] {
+  border: none;
+  border-bottom: 1px solid #000;
+}

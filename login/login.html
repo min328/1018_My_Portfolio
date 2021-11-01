@@ -50,11 +50,12 @@
                 <input id="rememberId" type="checkbox"><label for="rememberId">아이디 저장</label>
                 <div id="searchArea">
                     <ul class="flex">
-                        <li><a href="#">아이디찾기</a></li>
+                        <li><a href="#" data-link="findId">아이디찾기</a></li>
                         <li>│</li>
-                        <li><a href="#">비밀번호찾기</a></li>
+                        <li><a href="#" data-link
+                            ="findPass">비밀번호찾기</a></li>
                         <li>│</li>
-                        <li><a href="#">주문확인</a></li>
+                        <li><a href="#" data-link="findOrder">주문확인</a></li>
                     </ul>
                 </div>
                 <div id="loginLink" class="flex">
@@ -65,6 +66,93 @@
                 </div>
             </div> <!-- div#loginWrap -->
         </main> <!-- main#loginMain -->
+
+        <div id="findId" class="findArea">
+            <h2>아이디 찾기</h2>
+            <div class="infoBox">
+                <div class="col1">회원유형</div>
+                <div class="col2">
+                    <select id="">
+                        <option value="">개인회원</option>
+                        <option value="">개인 사업자회원</option>
+                        <option value="">법인 사업자회원</option>
+                    </select>
+                </div>
+            </div>
+            <div class="infoBox">
+                <div class="col1">인증방식</div>
+                <div class="col2">
+                    <input id="IdByEmail" type="radio" checked><label for="IdByEmail">이메일로 찾기</label>
+                    <input id="IdByPhone" type="radio"><label for="IdByPhone">휴대폰번호로 찾기</label>
+                </div>
+            </div>
+            <div class="infoBox">
+                <div class="col1">이름</div>
+                <div class="col2"><input type="text"></div>
+            </div>
+            <div id="IdBy" class="infoBox">
+                <div class="col1">이메일로 찾기</div>
+                <div class="col2"><input type="text"></div>
+            </div>
+            <div class="searchBtn">아이디찾기</div>
+            <div class="hideBtn">취소</div>
+        </div> <!-- div#findId -->
+
+        <div id="findPass" class="findArea">
+            <h2>비밀번호 찾기</h2>
+            <div class="infoBox">
+                <div class="col1">회원유형</div>
+                <div class="col2">
+                    <select id="">
+                        <option value="">개인회원</option>
+                        <option value="">개인 사업자회원</option>
+                        <option value="">법인 사업자회원</option>
+                    </select>
+                </div>
+            </div>
+            <div class="infoBox">
+                <div class="col1">인증방식</div>
+                <div class="col2">
+                    <input id="IdByEmail" type="radio" checked><label for="IdByEmail">이메일로 찾기</label>
+                    <input id="IdByPhone" type="radio"><label for="IdByPhone">휴대폰번호로 찾기</label>
+                </div>
+            </div>
+            <div class="infoBox">
+                <div class="col1">아이디</div>
+                <div class="col2"><input type="text"></div>
+            </div>
+            <div class="infoBox">
+                <div class="col1">이름</div>
+                <div class="col2"><input type="text"></div>
+            </div>
+            <div id="IdBy" class="infoBox">
+                <div class="col1">이메일로 찾기</div>
+                <div class="col2"><input type="text"></div>
+            </div>
+            <div class="searchBtn">비밀번호 찾기</div>
+            <div class="hideBtn">취소</div>
+        </div> <!-- div#findPass -->
+
+        <div id="findOrder" class="findArea">
+            <h2>비회원 주문조회</h2>
+            <div class="infoBox">
+                <div class="col1">주문자명</div>
+                <div class="col2"><input type="text"></div>
+            </div>
+            <div class="infoBox">
+                <div class="col1">주문번호</div>
+                <div class="col2"><input type="text" placeholder="하이픈(-) 포함"></div>
+            </div>
+            <div id="IdBy" class="infoBox">
+                <div class="col1">주문시 비밀번호</div>
+                <div class="col2"><input type="text"></div>
+            </div>
+            <div class="searchBtn">조회</div>
+            <div class="hideBtn">취소</div>
+        </div> <!-- div#findPass -->
+
+        
+
         <footer id="footer">
             <div id="linkLnb" class="flex">
                 <div><a href="">INSTAGRAM</a></div>
