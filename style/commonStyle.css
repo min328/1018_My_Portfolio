@@ -129,6 +129,7 @@ div#chatbotBtn {
   background-size: 60px 60px;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 }
 
 #chatbotBtn div#chatAlarm {

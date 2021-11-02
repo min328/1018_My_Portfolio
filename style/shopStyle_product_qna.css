@@ -112,6 +112,7 @@ main#qnaMain {
 
 #qnaMain div#qnaEmail div.col2 select#emailOption {
   height: 35px;
+  padding-left: 10px;
   border: 1px solid #ccc;
   outline: none;
   margin-top: 1px;

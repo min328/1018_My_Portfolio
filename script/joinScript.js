@@ -23,6 +23,7 @@ $(function(){
         let selectedEmail = $(this).val();
         
         if(selectedEmail == "self") {
+            $("input#email2").val("");
             $("input#email2").prop("readonly", false);
         } else {
             $("input#email2").prop("readonly", true);
