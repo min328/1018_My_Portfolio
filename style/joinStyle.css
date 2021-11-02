@@ -58,10 +58,10 @@ main#joinMain > p:first-child {
 }
 
 .infoBox div.col2 label {
-    margin-right: 10px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .infoBox div.col2 p {
@@ -204,7 +204,7 @@ main#joinMain > p:first-child {
 }
 
 #agreementArea div.agreementContainer label {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #agreementArea div.agreementContainer label[for="agreeAll"] {
@@ -266,17 +266,129 @@ button#joinCompleteBtn:hover {
 
 /* 주소검색 레이어팝업 strat */
 div#addressArea {
-    position: relative;
+  position: relative;
 }
 
 div#searchAddress {
-    width: 600px;
-    height: 500px;
-    border: 1px solid #000;
-    background-color: #fff;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  width: 600px;
+  border: 1px solid #000;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+#searchAddress header {
+  width: 100%;
+  height: 35px;
+  padding: 0 10px;
+  line-height: 35px;
+  background-color: #555;
+  position: relative;
+}
+
+#searchAddress header span {
+  color: #fff;
+  font-weight: bold;
+}
+
+#searchAddress header button {
+  color: #fff;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  right: 10px;
+  top: 2px;
+  font-size: 20px;
+  transform: scaleX(1.4);
+  cursor: pointer;
+}
+
+#searchAddress div#addressTab {
+  padding: 20px;
+  cursor: pointer;
+}
+
+#addressTab > div {
+  flex: 1;
+  height: 50px;
+  border: 1px solid #aaa;
+  border-bottom: 1px solid #000;
+  line-height: 50px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#addressTab div.selected {
+  border: 1px solid #000;
+  border-bottom: none;
+  background-color: #fff;
+}
+
+#searchAddress div#searchHere {
+  padding: 0px 20px;
+  margin-bottom: 10px;
+}
+
+#searchHere > div {
+  border: 1px solid #ccc;
+}
+
+#searchHere > div:first-child {
+  width: 100px;
+  border-right: none;
+  line-height: 90px;
+  text-align: center;
+  background-color: #eee;
+  font-size: 13px;
+}
+
+#searchHere > div:last-child {
+  flex: 1;
+  padding: 20px 10px;
+}
+
+#searchHere > div:last-child input {
+  width: 350px;
+  padding: 2px 10px;
+  outline: none;
+  border: 1px solid #ccc;
+  font-size: 12px;
+}
+
+#searchHere > div:last-child button {
+  color: #fff;
+  padding: 2px 10px;
+  border: none;
+  margin-left: 10px;
+  background-color: #000;
+  cursor: pointer;
+}
+
+#searchHere > div:last-child p {
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+#searchAddress div#searchRes {
+  margin: 20px;
+  height: 350px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 50px;
+  overflow-y: scroll;
+}
+
+#searchRes div#addressFound {
+  height: 400px;
+}
+
+#searchRes div#addressFound p {
+  padding-top: 150px;
+  text-align: center;
+  font-size: 13px;
 }
 /* 주소검색 레이어팝업 end */

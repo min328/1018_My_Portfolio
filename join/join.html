@@ -77,14 +77,33 @@
                     <div id="addressArea" class="infoBox">
                         <div class="col1">주소</div>
                         <div class="col2">
-                            <input type="text" placeholder="우편번호" id="address1"> <button type="button" id="searchAddressBtn" data-link="searchAddress">주소검색</button>
+                            <input type="text" placeholder="우편번호" id="address1"> <button type="button" id="searchAddressBtn">주소검색</button>
                             <br>
                             <input type="text" placeholder="기본주소" id="address2">
                             <input type="text" placeholder="나머지 주소 (선택 입력 기능)" id="address3">
                         </div>
                         <!-- 주소 검색 레이어 팝업 -->
                         <div id="searchAddress">
-                            <header>우편번호검색</header>
+                            <header>
+                                <span>우편번호 검색</span>
+                                <button type="button" id="closeBtn">X</button>
+                            </header>
+                            <div id="addressTab" class="flex">
+                                <div id="newAddress" class="selected">새 우편번호</div>
+                                <div id="prevAddress">구) 우편번호</div>
+                            </div>
+                            <div id="searchHere" class="flex">
+                                <div>지번/도로명</div>
+                                <div>
+                                    <div><input type="text"><button>검색</button></div>
+                                    <p>도로명+건물번호(예:테헤란로5) | 읍/면/동/리+지번(예:서린동154)</p>
+                                </div>
+                            </div> <!-- div#searchHere -->
+                            <div id="searchRes">
+                                <div id="addressFound">
+                                    <p>찾으실 지번주소 혹은 도로명주소를 검색해 주세요</p>
+                                </div>
+                            </div> <!-- div#searchRes -->
                         </div> <!-- div#searchAddress -->
                     </div>
                     <div class="infoBox">

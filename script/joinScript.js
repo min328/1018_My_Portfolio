@@ -41,4 +41,24 @@ $(function(){
         }
     });
 
+    /* 주소 검색 레이어 팝업 열기 */
+    $("button#searchAddressBtn").click(function(){
+        $("div#searchAddress").show();
+    });
+    
+    /* 주소 검색 레이어 팝업 닫기 */
+    $("div#searchAddress button#closeBtn").click(function(){
+        $("div#searchAddress").hide();
+    });
+
+    /* 주소 검색 레이어 탭 버튼 */
+    $("div#addressTab > div").click(function(){
+        $("div#addressTab > div").removeClass("selected");
+        $(this).addClass("selected");
+    });
+
+    $("button#joinCompleteBtn").click(function(){
+        alert("회원가입이 완료되었습니다!");
+        window.location.href = "/login/login.html";
+    });
 });
