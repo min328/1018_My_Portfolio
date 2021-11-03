@@ -85,8 +85,8 @@
                         <span>on</span>
                     </div>
                     <div id="isAnswered">
-                        <div class="customSelect"><p>답변상태</p></div>
-                        <ul>
+                        <div class="customSelect">답변상태</div>
+                        <ul class="customOption">
                             <li>답변상태</li>
                             <li>미답변</li>
                             <li>답변완료</li>
@@ -105,7 +105,9 @@
                 <div class="row_content flex">
                     <div class="col1">미답변</div>
                     <div class="col2 flex">
-                        <img src="" alt="">
+                        <div class="imgBox">
+                            <img src="" alt="">
+                        </div>
                         <div>
                             <p class="productName">상품명</p>
                             <p class="inquiryTitle">문의제목</p>
@@ -117,7 +119,9 @@
                 <div class="row_content flex">
                     <div class="col1">답변</div>
                     <div class="col2 flex">
-                        <img src="" alt="">
+                        <div class="imgBox">
+                            <img src="" alt="">
+                        </div>
                         <div>
                             <p class="productName">상품명</p>
                             <p class="inquiryTitle">문의제목</p>
@@ -143,20 +147,30 @@
                 </div>
             </div> <!-- div#qnaListTbl -->
             <div id="pagingArea">
+                <button type="button">&laquo;</button>
+                <button type="button">&lsaquo;</button>
                 <button type="button" class="selected">1</button>
                 <button type="button">2</button>
                 <button type="button">3</button>
                 <button type="button">4</button>
                 <button type="button">5</button>
+                <button type="button">&rsaquo;</button>
+                <button type="button">&raquo;</button>
             </div> <!-- div#pagingArea -->
-            <div id="searchArea">
-                <select name="" id="">
-                    <option value="">제목</option>
-                    <div class="flex">
-                        <input type="text">
-                        <button>검색</button>
-                    </div>
-                </select>
+            <div id="searchArea" class="flex">
+                <div>
+                    <div class="customSelect">제목</div>
+                    <ul class="customOption">
+                        <li>제목</li>
+                        <li>상품명</li>
+                        <li>상품번호</li>
+                    </ul>
+                    <span><i class="fas fa-caret-up"></i></span>
+                </div>
+                <div>
+                    <input type="text">
+                    <button type="button" id="searchBtn">검색</button>
+                </div>
             </div> <!-- div#searchArea -->
         </main> <!-- main#qnaMain -->
 
