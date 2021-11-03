@@ -76,18 +76,25 @@
         </header> <!-- header#header -->
 
         <main id="qnaMain">
-            <div>
+            <div id="mainTitle" class="flex">
                 <div><h2>Q&A</h2></div>
                 <div id="qnaSubSys" class="flex">
-                    <span>내 Q&A만 보기</span>
-                    <div>on off</div>
-                    <select id="isAnswered">
-                        <option value="0">답변상태</option>
-                        <option value="1">미답변</option>
-                        <option value="2">답변완료</option>
-                    </select>
+                    <span id="seeMyQna">내 Q&A만 보기</span>
+                    <div id="seeMyQnaBtn">
+                        <span>off</span>
+                        <span>on</span>
+                    </div>
+                    <div id="isAnswered">
+                        <div class="customSelect"><p>답변상태</p></div>
+                        <ul>
+                            <li>답변상태</li>
+                            <li>미답변</li>
+                            <li>답변완료</li>
+                        </ul>
+                        <span><i class="fas fa-caret-up"></i></span>
+                    </div> <!-- div#isAnswered -->
                 </div>
-            </div>
+            </div> <!-- div#mainTitle -->
             <div id="qnaListTbl">
                 <div id="headRow" class="row flex">
                     <div class="col1">답변상태</div>
@@ -100,16 +107,47 @@
                     <div class="col2 flex">
                         <img src="" alt="">
                         <div>
-                            <p>상품명</p>
-                            <p>문의제목</p>
+                            <p class="productName">상품명</p>
+                            <p class="inquiryTitle">문의제목</p>
                         </div>
                     </div>
                     <div class="col3">김영희</div>
                     <div class="col4">2021.11.03</div>
                 </div> <!-- div.row_content -->
+                <div class="row_content flex">
+                    <div class="col1">답변</div>
+                    <div class="col2 flex">
+                        <img src="" alt="">
+                        <div>
+                            <p class="productName">상품명</p>
+                            <p class="inquiryTitle">문의제목</p>
+                        </div>
+                    </div>
+                    <div class="col3">김영희</div>
+                    <div class="col4">2021.11.03</div>
+                </div> <!-- div.row_content -->
+                <div class="row_prev_q_answer">
+                    <div class="flex inquiryContent">
+                        <div class="col1"></div>
+                        <div class="col2">질문내용</div>
+                    </div>
+                    <div class="flex answerContent">
+                        <div class="col1"></div>
+                        <div class="col2">
+                            <span class="answerBadge">답변</span>
+                            <p>답변내용</p>
+                        </div>
+                        <div class="col3">판매자</div>
+                        <div class="col4">답변날짜</div>
+                    </div>
+                </div>
             </div> <!-- div#qnaListTbl -->
             <div id="pagingArea">
-                <button class="paging">1</button>
+                <button type="button" class="selected">1</button>
+                <button type="button">2</button>
+                <button type="button">3</button>
+                <button type="button">4</button>
+                <button type="button">5</button>
             </div> <!-- div#pagingArea -->
             <div id="searchArea">
                 <select name="" id="">

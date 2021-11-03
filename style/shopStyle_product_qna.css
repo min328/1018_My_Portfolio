@@ -179,7 +179,7 @@ main#qnaMain {
   position: absolute;
   right: 10px;
   top: 2px;
-  z-index: 10;
+  z-index: 9;
 }
 
 #textEditor div.selectBox span i {
