@@ -39,31 +39,15 @@ main#qnaMain {
 }
 
 #qnaSubSys div#isAnswered {
-  width: 80px;
-  padding-left: 5px;
-  border: 1px solid #ccc;
-  margin-top: -4px;
-  position: relative;
-  cursor: pointer;
+    position: relative;
+    top: -2px;
 }
 
-#isAnswered ul {
-  width: inherit;
-  padding-left: 5px;
-  border: 1px solid #ccc;
-  border-top: none;
-  position: absolute;
-  background-color: #fff;
-  display: none;
-}
-
-#isAnswered div.customSelect {
-  padding: 2px 5px;
-  padding-right: 20px;
-}
-
-#isAnswered ul li {
-  padding-left: 3px;
+#isAnswered select {
+    width: 80px;
+    padding-left: 5px;
+    border: 1px solid #ccc;
+    outline: none;
 }
 
 #isAnswered span:last-child {
@@ -127,20 +111,21 @@ main#qnaMain {
 #qnaMain div.row_content div.imgBox {
   width: 70px;
   height: 70px;
+  border: 1px solid #ccc;
+  margin-right: 30px;
   text-align: center;
   line-height: 70px;
 }
 
 #qnaListTbl div.row_content div.col2 img {
-  width: inherit;
-  height: inherit;
-  border: 1px solid #000;
-  margin-right: 10px;
+    width: inherit;
+    height: inherit;
   display: block;
 }
 
 #qnaListTbl div.row_content div.col2 p.productName {
   color: #00f;
+  margin-top: 20px;
   font-size: 10px;
 }
 
@@ -194,6 +179,11 @@ main#qnaMain {
   text-align: center;
   font-size: 12px;
 }
+
+#pagingArea button.pageNum:hover {
+    text-decoration: underline;
+    background-color: #eee;
+}
 /* div#pagingArea영역 end */
 
 /* div#searchArea영역 start */
@@ -201,44 +191,14 @@ main#qnaMain {
   justify-content: center;
 }
 
-#searchArea > div:first-child {
-  margin-right: 10px;
-  position: relative;
-  font-size: 13px;
-  cursor: pointer;
+#searchArea select {
+    padding-left: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-right: 10px;
 }
 
-#searchArea div.customSelect {
-  width: 90px;
-  height: 30px;
-  padding-left: 10px;
-  border: 1px solid #ccc;
-  line-height: 30px;
-  text-align-last: left;
-}
-
-#searchArea ul.customOption {
-  width: 90px;
-  padding-left: 10px;
-  border: 1px solid #ccc;
-  border-top: none;
-  background-color: #fff;
-  position: absolute;
-}
-
-#searchArea ul.customOption li {
-  height: 30px;
-  line-height: 30px;
-}
-
-#searchArea span {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  z-index: 9;
-}
-
-#searchArea > div:last-child input {
+#searchArea input {
   width: 200px;
   height: 30px;
   padding-left: 10px;

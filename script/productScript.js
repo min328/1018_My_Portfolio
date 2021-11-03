@@ -298,9 +298,10 @@ $(function(){
 
     /* product_qna.html div#textEditor select 클릭 => 화살표 방향 변경 및, 옵션창 보여주기 */
     $("div.selectBox div.customSelect").click(function(){
-        /* 1. 모든 ul.selctOpt 안보이게,div.customeSelect 모두 배경색 흰색으로 복구 */
+        /* 1. 모든 ul.selctOpt 안보이게,div.customeSelect 모두 배경색 흰색으로 복구, 화살표 모두 up */
         $("ul.selectOpt").slideUp();
         $("div.customSelect").css("background-color", "#fff"); 
+        $("div.customSelect").nextAll("span").children("i").addClass("fa-caret-up");
         /* 2. 클릭된 div.customeSelect만 배경색 #eee, 이웃태그의 ul.selectOpt 생성 */
         $(this).css({"background-color":"#eee", "transition":"0.5s"});
         let options = $(this).next("ul.selectOpt");
@@ -310,7 +311,6 @@ $(function(){
             options.slideDown();
             $(this).nextAll("span").children("i").removeClass("fa-caret-up");
             $(this).nextAll("span").children("i").addClass("fa-caret-down");
-
         } else {
             /* 4. 만약 ul.selectOpt 가 display:blcok 보여지는 상태라면 슬라이드를 업, 왜냐하면 사용자가 값을 선택하지 않고 단순히 옵션창 클릭을 반복 했을 때에도 슬라이드가 업될 수 있도록. */
             $(this).nextAll("span").children("i").removeClass("fa-caret-down");
