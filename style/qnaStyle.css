@@ -39,15 +39,15 @@ main#qnaMain {
 }
 
 #qnaSubSys div#isAnswered {
-    position: relative;
-    top: -2px;
+  position: relative;
+  top: -2px;
 }
 
 #isAnswered select {
-    width: 80px;
-    padding-left: 5px;
-    border: 1px solid #ccc;
-    outline: none;
+  width: 80px;
+  padding-left: 5px;
+  border: 1px solid #ccc;
+  outline: none;
 }
 
 #isAnswered span:last-child {
@@ -100,7 +100,7 @@ main#qnaMain {
 #qnaListTbl div.row_content div.col1,
 #qnaListTbl div.row_content div.col3,
 #qnaListTbl div.row_content div.col4 {
-  line-height: 90px;
+  line-height: 80px;
 }
 
 #qnaListTbl div.row_content div.col2 {
@@ -108,9 +108,17 @@ main#qnaMain {
   text-align: left;
 }
 
+#qnaListTbl div.row_content div.col2 * {
+  cursor: pointer;
+}
+
+#qnaListTbl div.row_content div.col2 > div:last-child *:hover {
+  text-decoration: underline;
+}
+
 #qnaMain div.row_content div.imgBox {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   border: 1px solid #ccc;
   margin-right: 30px;
   text-align: center;
@@ -118,35 +126,52 @@ main#qnaMain {
 }
 
 #qnaListTbl div.row_content div.col2 img {
-    width: inherit;
-    height: inherit;
+  width: inherit;
+  height: inherit;
   display: block;
 }
 
 #qnaListTbl div.row_content div.col2 p.productName {
   color: #00f;
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 10px;
 }
 
 #qnaListTbl div.row_prev_q_answer {
   border-bottom: 1px solid #ccc;
   background-color: #eee;
-  font-size: 11px;
+  font-size: 12px;
+  display: none;
 }
 
 #qnaListTbl div.row_prev_q_answer div.col2 {
-  padding: 10px;
+  padding: 5px;
   text-align: left;
 }
 
-#qnaListTbl div.row_prev_q_answer div.inquiryContent div.col2 {
+#qnaListTbl div.row_prev_q_answer div.inquiryContent div.answered {
   border-bottom: 1px solid #ccc;
 }
 
 #qnaListTbl div.row_prev_q_answer div.col3,
 #qnaListTbl div.row_prev_q_answer div.col4 {
   line-height: 70px;
+}
+
+p.inquiryTitle i.fa-lock {
+  font-size: 5px;
+  margin-left: 3px;
+}
+
+div.answerContent span.answerBadge {
+  display: inline-block;
+  color: #fff;
+  padding: 0 3px;
+  border: 1px solid #aaa;
+  margin-bottom: 1px;
+  border-radius: 3px;
+  background-color: #aaa;
+  font-size: 8px;
 }
 /* div#qnaListTbl영역 end */
 
@@ -181,8 +206,8 @@ main#qnaMain {
 }
 
 #pagingArea button.pageNum:hover {
-    text-decoration: underline;
-    background-color: #eee;
+  text-decoration: underline;
+  background-color: #eee;
 }
 /* div#pagingArea영역 end */
 
@@ -192,10 +217,10 @@ main#qnaMain {
 }
 
 #searchArea select {
-    padding-left: 5px;
-    border: 1px solid #ccc;
-    outline: none;
-    margin-right: 10px;
+  padding-left: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  margin-right: 10px;
 }
 
 #searchArea input {

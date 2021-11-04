@@ -80,12 +80,12 @@
                 <div><h2>Q&A</h2></div>
                 <div id="qnaSubSys" class="flex">
                     <span id="seeMyQna">내 Q&A만 보기</span>
-                    <div id="seeMyQnaBtn">off</div>
+                    <div id="seeMyQnaBtn" class="off">off</div>
                     <div id="isAnswered">
-                        <select id="">
-                            <option value="">답변상태</option>
-                            <option value="">미답변</option>
-                            <option value="">답변완료</option>
+                        <select>
+                            <option value="0">답변상태</option>
+                            <option value="-1">미답변</option>
+                            <option value="1">답변완료</option>
                         </select>
                     </div> <!-- div#isAnswered -->
                 </div>
@@ -97,7 +97,7 @@
                     <div class="col3">작성자</div>
                     <div class="col4">작성일</div>
                 </div> <!-- div#headRow -->
-                <div class="row_content flex">
+                <!-- <div class="row_content flex">
                     <div class="col1">미답변</div>
                     <div class="col2 flex">
                         <div class="imgBox">
@@ -110,9 +110,9 @@
                     </div>
                     <div class="col3">김영희</div>
                     <div class="col4">2021.11.03</div>
-                </div> <!-- div.row_content -->
-                <div class="row_content flex">
-                    <div class="col1">답변</div>
+                </div> --> <!-- div.row_content -->
+                <!-- <div class="row_content flex">
+                    <div class="col1 answered">답변</div>
                     <div class="col2 flex">
                         <div class="imgBox">
                             <img src="" alt="">
@@ -124,8 +124,8 @@
                     </div>
                     <div class="col3">김영희</div>
                     <div class="col4">2021.11.03</div>
-                </div> <!-- div.row_content -->
-                <div class="row_prev_q_answer">
+                </div> --> <!-- div.row_content -->
+                <!-- <div class="row_prev_q_answer">
                     <div class="flex inquiryContent">
                         <div class="col1"></div>
                         <div class="col2">질문내용</div>
@@ -139,7 +139,7 @@
                         <div class="col3">판매자</div>
                         <div class="col4">답변날짜</div>
                     </div>
-                </div>
+                </div> --> <!-- div.row_prev_q_answer -->
             </div> <!-- div#qnaListTbl -->
             <div id="pagingArea">
                 <button type="button">&laquo;</button>
