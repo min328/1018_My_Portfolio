@@ -302,7 +302,7 @@ main#productMain {
 /* div#review start */
 /* 리뷰내용 테이블 */
 #productMain div#review {
-margin-top: 150px;
+  margin-top: 150px;
 }
 
 #productMain div#review table#reviewList {
