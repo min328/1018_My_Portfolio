@@ -1,0 +1,31 @@
+@charset "UTF-8";
+@import url(reset.css);
+@import url(commonStyle.css);
+
+main#myPageMain {
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+main div.menu {
+    width: 400px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+main div.menu p.title {
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+main div.menu p.sub {
+    color: #aaa;
+    font-size: 12px;
+}
+
+main div.menu:hover p.sub {
+    color: #000;
+}
