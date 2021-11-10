@@ -2,57 +2,70 @@
 @import url(reset.css);
 @import url(commonStyle.css);
 
-main#cartMain h2 {
-    text-align: center;
-    margin-bottom: 80px;
+main#cartMain {
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 100px;
 }
 
-#cartMain div#cartList {
-    width: 1200px;
-    margin: 0 auto;
+#cartMain h2 {
+  text-align: center;
+  margin-bottom: 60px;
+  font-weight: bold;
+  font-size: 32px;
 }
 
-#cartList div#listTop {
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: #eee;
-    font-size: 12px;
-    font-weight: bold;
+#cartMain div#cartList div#listTop {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  font-size: 12px;
+  font-weight: bold;
 }
 
-#cartList div.listBox,
 #cartList div#listHeader {
-    text-align: center;
+  height: 35px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#cartList div.listBox {
+  border-top: 1px solid #ccc;
+}
+
+#cartList div.listBox:last-child {
+  border-bottom: 1px solid #ccc;
+}
+
+#cartList div#listHeader,
+#cartList div.listBox {
+  text-align: center;
 }
 
 #cartList div.listBox > div,
 #cartList div#listHeader > div {
-    padding: 10px 5px;
+  padding: 10px 5px;
 }
 
 #cartList div.col1 {
-    width: 30px;
-    border: 1px solid #000;
+  width: 30px;
 }
 
 #cartList div.col2 {
-    width: 120px;
-    border: 1px solid #000;
+  width: 120px;
 }
 
 #cartList div.col2 img {
-    width: 80px;
-    height: 80px;
+  width: 80px;
+  height: 80px;
 }
 
 #cartList div.col3 {
-    flex: 1;
-    border: 1px solid #000;
+  flex: 1;
 }
 
 #cartList div.col4 {
-    width: 60px;
-    border: 1px solid #000;
+  width: 80px;
 }
 
 #cartList div.col5,
@@ -60,6 +73,205 @@ main#cartMain h2 {
 #cartList div.col7,
 #cartList div.col8,
 #cartList div.col9 {
-    width: 100px;
+  width: 100px;
+}
+
+#cartList div#listHeader div.col1 {
+  padding-top: 12px;
+}
+
+#cartList div.listBox div.col3 {
+  padding-left: 10px;
+  text-align: left;
+  font-weight: bold;
+}
+
+#cartList div.listBox div.col4,
+#cartList div.listBox div.col5 {
+  font-weight: bold;
+}
+
+#cartList div.listBox div.col1,
+#cartList div.listBox div.col3,
+#cartList div.listBox div.col4,
+#cartList div.listBox div.col5,
+#cartList div.listBox div.col6,
+#cartList div.listBox div.col7,
+#cartList div.listBox div.col8 {
+  padding-top: 40px;
+}
+
+#cartList div.listBox div.col4 {
+  padding-top: 36px;
+  position: relative;
+}
+
+#cartList div.listBox div.col4 button {
+  width: 15px;
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 36px; /* col4, padding-top 이랑 맞추기 */
+  display: block;
+  cursor: pointer;
+}
+
+#cartList div.listBox div.col4 button.countUpBtn {
+  left: 5px;
+}
+
+#cartList div.listBox div.col4 button.countDownBtn {
+  right: 5px;
+}
+
+#cartList div.listBox div.col4 span.productCountRes {
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  border: 1px solid #ccc;
+}
+
+#cartList div.listBox div.col9 {
+  padding-top: 12px;
+}
+
+#cartList div.listBox div.col9 button {
+  width: 70px;
+  padding: 2px 0;
+  font-size: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button.orderThisBtn {
+  color: #fff;
+  background-color: rgb(39, 41, 68);
+  border: 1px solid #aaa;
+}
+
+button.orderThisBtn:hover {
+  background-color: rgba(39, 41, 68, 0.9);
+}
+
+button.wishBtn,
+button.deleBtn {
+  background-color: #fff;
+  border: 1px solid #aaa;
+}
+
+button.wishBtn:hover,
+button.deleBtn:hover {
+  background-color: #eee;
+  border: 1px solid #aaa;
+}
+
+#cartMain div#listMenu {
+  padding-top: 10px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#listMenu button {
+  padding: 2px 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+  cursor: pointer;
+}
+
+#listMenu button:hover {
+    color: #fff;
+    background-color: #000;
     border: 1px solid #000;
+    transition: 0.5s;
+}
+
+#cartMain div#calcArea {
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#calcArea > div {
+    display: flex;
+}
+
+#calcArea > div > div {
+    padding: 10px;
+}
+
+#calcArea div.col1 {
+    width: 200px;
+}
+#calcArea div.col2 {
+    width: 200px;
+}
+#calcArea div.col3 {
+    width: 200px;
+}
+#calcArea div.col4 {
+    flex: 1;
+}
+
+#calcArea div#calcTop {
+    font-size: 12px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+#calcArea div#clacMain {
+    font-size: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+#cartMain div#orderMenu {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+#orderMenu button {
+    width: 150px;
+    height: 50px;
+    border: 1px solid #000;
+    background-color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#orderMenu button#orderFinalBtn {
+    color: #fff;
+    background-color: #000;
+}
+
+#cartMain div#cartNotice {
+    padding: 30px;
+    border: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+
+#cartNotice h3 {
+    font-size: 17px;
+}
+
+#cartNotice h4 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+
+#cartNotice ol li::before {
+    content: "- ";
+}
+
+#cartNotice ol li {
+    color: #777;
+    padding: 2px 0;
+    margin-left: 20px;
+    font-size: 12px;
+    font-weight: bold;
 }
