@@ -134,6 +134,16 @@ main#cartMain {
   font-weight: bold;
 }
 
+.listBox div.col5 {
+  padding-top: 30px !important;
+}
+
+.listBox div.col5 p.original {
+  color: #aaa;
+  text-decoration: line-through;
+  font-size: 12px;
+}
+
 #cartList div.listBox div.col9 {
   padding-top: 12px;
 }

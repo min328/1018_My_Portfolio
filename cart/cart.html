@@ -103,7 +103,10 @@
                         <button type="button" class="countUpBtn">+</button>
                         <button type="button" class="countDownBtn">-</button>
                     </div>
-                    <div class="col5 price">15900</div>
+                    <div class="col5">
+                        <p class="price original">15900</p>
+                        <p class="price discounted"></p>
+                    </div>
                     <div class="col6">110</div>
                     <div class="col7">기본배송</div>
                     <div class="col8">무료</div>
@@ -125,7 +128,10 @@
                         <button type="button" class="countUpBtn">+</button>
                         <button type="button" class="countDownBtn">-</button>
                     </div>
-                    <div class="col5 price">11900</div>
+                    <div class="col5">
+                        <p class="price original">11900</p>
+                        <p class="price discounted"></p>
+                    </div>
                     <div class="col6">520</div>
                     <div class="col7">기본배송</div>
                     <div class="col8">무료</div>
@@ -154,15 +160,15 @@
                     <div class="col4">결제예정금액</div>
                 </div> <!-- div#calcTop -->
                 <div id="clacMain">
-                    <div class="col1"><span class="price">280000</span><span class="won">원</span></div>
+                    <div class="col1"><span class="price"><!-- 총 상품금액 --></span><span class="won">원</span></div>
                     <div class="col2">+<span class="price">0</span><span class="won">원</span></div>
-                    <div class="col3">-<span class="price">56000</span><span class="won">원</span></div>
-                    <div class="col4" id="totalPrice">=<span class="price">224000</span><span class="won">원</span></div>
+                    <div class="col3">-<span class="price"><!-- 총 할인금액 --></span><span class="won">원</span></div>
+                    <div class="col4" id="totalPrice">=<span class="price"><!-- 결제예정금액 --></span><span class="won">원</span></div>
                 </div> <!-- div#clacMain -->
             </div> <!-- div#calcArea -->
 
             <div id="orderMenu">
-                <button type="button" id="continueShopBtn">쇼핑계속하기</button>
+                <button type="button" id="continueShopBtn" onclick="location.href='/shop/shop.html';">쇼핑계속하기</button>
                 <button type="button" id="orderFinalBtn">주문하기</button>
             </div> <!-- div#orderMenu -->
 
