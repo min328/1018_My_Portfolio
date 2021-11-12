@@ -21,7 +21,6 @@ $(function(){
     // html최초 로드시 전체 선택 상태에서 계산실행
     writeCalcRes();
 
-   
     // 할인전 기본금액 html에 output하는 함수
     function writeCalcRes() {
         
@@ -144,5 +143,30 @@ $(function(){
         $("button#clearListBtn").hide();
         $("input#selectAllProduct").prop("checked", false);
     }
+
+    // 상품 수량 변경 버튼
+    $("button.countUpBtn").click(function(){
+        let countNum = $(this).siblings("input.productCountRes").val();
+        countNum = Number(countNum);
+        countNum += 1;
+        if(countNum > 10) {
+            alert("최대 구매 수량은 10개 입니다.");
+            return false;
+        } else {
+            $(this).siblings("input.productCountRes").val(countNum);
+        }
+    });
+
+    $("button.countDownBtn").click(function(){
+        let countNum = $(this).siblings("input.productCountRes").val();
+        countNum = Number(countNum);
+        countNum -= 1;
+        if(countNum < 1) {
+            alert("최소 구매 수량은 1개 입니다.");
+            return false;
+        } else {
+            $(this).siblings("input.productCountRes").val(countNum);
+        }
+    });
 
 });
