@@ -25,15 +25,12 @@ main#cartMain {
 
 #cartList div#listHeader {
   height: 35px;
+  border-bottom: 1px solid #ccc;
   font-size: 12px;
   font-weight: bold;
 }
 
 #cartList div.listBox {
-  border-top: 1px solid #ccc;
-}
-
-#cartList div.listBox:last-child {
   border-bottom: 1px solid #ccc;
 }
 
@@ -58,10 +55,12 @@ main#cartMain {
 #cartList div.col2 img {
   width: 80px;
   height: 80px;
+  cursor: pointer;
 }
 
 #cartList div.col3 {
   flex: 1;
+  cursor: pointer;
 }
 
 #cartList div.col4 {
@@ -125,11 +124,14 @@ main#cartMain {
   right: 5px;
 }
 
-#cartList div.listBox div.col4 span.productCountRes {
+#cartList div.listBox div.col4 input.productCountRes {
+  width: 70px;
   height: 30px;
   line-height: 30px;
   display: block;
   border: 1px solid #ccc;
+  text-align: center;
+  font-weight: bold;
 }
 
 #cartList div.listBox div.col9 {
@@ -142,6 +144,14 @@ main#cartMain {
   font-size: 10px;
   border-radius: 3px;
   cursor: pointer;
+}
+
+#cartList div#cartEmpty {
+  height: 200px;
+  line-height: 250px;
+  text-align: center;
+  font-size: 16px;
+  display: none;
 }
 
 button.orderThisBtn {
@@ -274,4 +284,14 @@ button.deleBtn:hover {
     margin-left: 20px;
     font-size: 12px;
     font-weight: bold;
+}
+
+div#totalPrice,
+div#totalPrice *{
+  color: #000;
+}
+
+span.won {
+  margin-left: 5px;
+  font-size: 14px;
 }

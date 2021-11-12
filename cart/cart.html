@@ -78,10 +78,10 @@
             <h2>장바구니</h2>
 
             <div id="cartList">
-                <div id="listTop">일반상품 (<span id="prodcutCount">2</span>)</div> <!-- div#listTop -->
+                <div id="listTop">일반상품 (<span id="prodcutCount"></span>)</div> <!-- div#listTop -->
 
                 <div id="listHeader" class="flex">
-                    <div class="col1"><input type="checkbox" id="allProduct"></div>
+                    <div class="col1"><input type="checkbox" id="selectAllProduct"></div>
                     <div class="col2">이미지</div>
                     <div class="col3">상품정보</div>
                     <div class="col4">수량</div>
@@ -93,18 +93,18 @@
                 </div> <!-- div#listHeader -->
                 
                 <div class="listBox flex">
-                    <div class="col1"><input type="checkbox" id="allProduct"></div>
+                    <div class="col1"><input type="checkbox" class="selectEach"></div>
                     <div class="col2">
-                        <img src="/images/product_1.jpg" alt="">
+                        <img src="/images/product_3.jpg" alt="">
                     </div>
-                    <div class="col3">상품명</div>
+                    <div class="col3">제주 당도 선별 GAP 감귤 2kg</div>
                     <div class="col4">
-                        <span class="productCountRes">1</span>
+                        <input class="productCountRes" value="1">
                         <button type="button" class="countUpBtn">+</button>
                         <button type="button" class="countDownBtn">-</button>
                     </div>
-                    <div class="col5">52000</div>
-                    <div class="col6">520</div>
+                    <div class="col5 price">15900</div>
+                    <div class="col6">110</div>
                     <div class="col7">기본배송</div>
                     <div class="col8">무료</div>
                     <div class="col9">
@@ -115,17 +115,17 @@
                 </div> <!-- div.listBox -->
 
                 <div class="listBox flex">
-                    <div class="col1"><input type="checkbox" id="allProduct"></div>
+                    <div class="col1"><input type="checkbox" class="selectEach"></div>
                     <div class="col2">
                         <img src="/images/product_1.jpg" alt="">
                     </div>
-                    <div class="col3">상품명</div>
+                    <div class="col3">진영 '햇'단감 1.5kg</div>
                     <div class="col4">
-                        <span class="productCountRes">1</span>
+                        <input class="productCountRes" value="1">
                         <button type="button" class="countUpBtn">+</button>
                         <button type="button" class="countDownBtn">-</button>
                     </div>
-                    <div class="col5">52000</div>
+                    <div class="col5 price">11900</div>
                     <div class="col6">520</div>
                     <div class="col7">기본배송</div>
                     <div class="col8">무료</div>
@@ -135,6 +135,10 @@
                         <button type="button" class="deleBtn">삭제</button>
                     </div>
                 </div> <!-- div.listBox -->
+
+                <div id="cartEmpty">
+                    장바구니가 비어있습니다.
+                </div> <!-- div#cartEmpty -->
             </div> <!-- div#cartList -->
 
             <div id="listMenu">
@@ -150,10 +154,10 @@
                     <div class="col4">결제예정금액</div>
                 </div> <!-- div#calcTop -->
                 <div id="clacMain">
-                    <div class="col1">280000</div>
-                    <div class="col2">+0원</div>
-                    <div class="col3">-56000원</div>
-                    <div class="col4">=224000원</div>
+                    <div class="col1"><span class="price">280000</span><span class="won">원</span></div>
+                    <div class="col2">+<span class="price">0</span><span class="won">원</span></div>
+                    <div class="col3">-<span class="price">56000</span><span class="won">원</span></div>
+                    <div class="col4" id="totalPrice">=<span class="price">224000</span><span class="won">원</span></div>
                 </div> <!-- div#clacMain -->
             </div> <!-- div#calcArea -->
 
