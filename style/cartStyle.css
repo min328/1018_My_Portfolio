@@ -2,6 +2,19 @@
 @import url(reset.css);
 @import url(commonStyle.css);
 
+@keyframes beginning {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+html {
+  animation: 0.5s ease-in-out 0s 1 beginning;
+}
+
 main#cartMain {
   width: 1200px;
   margin: 0 auto;

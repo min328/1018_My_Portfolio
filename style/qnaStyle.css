@@ -1,6 +1,19 @@
 @charset "UTF-8";
 @import url(commonStyle.css);
 
+@keyframes beginning {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+html {
+  animation: 1s ease-in-out 0s 1 beginning;
+}
+
 main#qnaMain {
   width: 1000px;
   margin: 0 auto;
