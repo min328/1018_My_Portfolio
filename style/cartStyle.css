@@ -132,6 +132,7 @@ main#cartMain {
   border: 1px solid #ccc;
   text-align: center;
   font-weight: bold;
+  outline: none;
 }
 
 .listBox div.col5 {

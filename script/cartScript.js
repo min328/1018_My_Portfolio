@@ -18,7 +18,7 @@ $(function(){
                             + "<div class=\"col2\"><img src=\"" + imgSrc + "\" alt=\"\"></div>"
                             + "<div class=\"col3\">" + productName + "</div>"
                             + "<div class=\"col4\">"
-                                + "<input class=\"productCountRes\" value=\"1\">"
+                                + "<input class=\"productCountRes\" value=\"1\" readonly>"
                                 + "<button type=\"button\" class=\"countUpBtn\">+</button>"
                                 + "<button type=\"button\" class=\"countDownBtn\">-</button>"
                             + "</div>"
