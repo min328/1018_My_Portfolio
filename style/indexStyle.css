@@ -16,7 +16,7 @@ html {
 
 /* style_common.css header, main re-style */
 header#header {
-  background-color: transparent !important;
+  background-color: transparent;
 }
 
 div#headerLogo a {

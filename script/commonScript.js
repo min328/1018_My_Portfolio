@@ -22,4 +22,10 @@ $(function(){
         $("div#chatbotBtn").children("div#chatAlarm").show();
     });
     
+    /* 헤더 lnb 메뉴 - 검색 아이콘 클릭 */
+
+    $("nav#headerLnb ul li:last-child").click(function(ignore){
+        ignore.preventDefault(); // 앵커 기능 막기
+
+    });
 });

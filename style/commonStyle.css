@@ -6,7 +6,7 @@ div#wrap {
 }
 
 /* test */
-div#temp {
+/* div#temp {
   width: 70px;
   height: 70px;
   border: 1px solid #000;
@@ -19,7 +19,7 @@ div#temp {
 #temp span#scrollTest {
   color: #fff;
   font-size: 30px;
-}
+} */
 
 /* header#header start */
 header#header {
@@ -150,8 +150,6 @@ div#chatbotBtn {
 
 div#chatMessage {
   width: 300px;
-  height: 500px;
-  padding-top: 50px;
   border-radius: 30px;
   background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
