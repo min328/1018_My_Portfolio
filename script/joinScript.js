@@ -59,7 +59,6 @@ $(function(){
     });
 
     $("button#joinCompleteBtn").click(function(){
-        alert("회원가입이 완료되었습니다!");
-        window.location.href = "/login/login.html";
+        window.location.href = "join_completed.html";
     });
 });

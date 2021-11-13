@@ -392,3 +392,59 @@ div#searchAddress {
   font-size: 13px;
 }
 /* 주소검색 레이어팝업 end */
+
+/* 회원가입 완료페이지 */
+main#joinCompleted {
+  padding-top: 40px;
+  text-align: center;
+}
+
+#joinCompleted h1 {
+  font-size: 25px;
+  margin: 20px 0; 
+}
+
+#joinCompleted div#userInfoWrap {
+  width: 450px;
+  padding: 10px 20px;
+  background-color: rgba(238, 238, 238, 0.5);
+  margin: 0 auto;
+  font-size: 15px;
+}
+
+#userInfoWrap div.infoBox div.col1 {
+  width: 100px;
+  height: 30px;
+  padding: 0 5px;
+  font-weight: normal;
+  line-height: 30px;
+}
+
+#userInfoWrap div.infoBox div.col2 {
+  flex: 1;
+  height: 30px;
+  padding: 0 5px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: left;
+  line-height: 30px;
+}
+
+#joinCompleted a#toHome {
+  display: inline-block;
+  color: #555;
+  width: 60px;
+  height: 30px;
+  padding: 5px 10px;
+  border: 1px solid #000;
+  margin: 40px 0;
+  margin-bottom: 100px;
+  font-size: 12px;
+}
+
+#joinCompleted a#toHome:hover {
+  color: #fff;
+  background-color: #000;
+  transition: 0.5s;
+}
+/* 회원가입 완료페이지 */
