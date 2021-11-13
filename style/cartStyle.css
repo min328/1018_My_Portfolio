@@ -305,3 +305,8 @@ span.won {
   margin-left: 5px;
   font-size: 14px;
 }
+
+p.discounted,
+div#totalPrice span.price {
+  color: #00f;
+}
