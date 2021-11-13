@@ -50,18 +50,18 @@ $(function(){
     /* html최초 로드시 전체 선택 상태에서 계산실행 */
     writeCalcRes();
 
-    /* 할인전 기본금액 html에 output하는 함수 */
+    /* 기본금액, 할인금액, 결제예정금액 html에 output하는 함수 */
     function writeCalcRes() {
         
         // 할인전 기본금액 합계 구하기
         let originalTotal = calcTotalOriginal();
         $("div#clacMain div.col1 span.price").text(originalTotal);
 
-        // 할인 금액 합계 구하기
+        // 할인금액 합계 구하기
         let discountedTotal = calcTotalDiscounted();
         $("div#clacMain div.col3 span.price").text(discountedTotal);
 
-        // 결제 예정 금액 구하기
+        // 결제예정 금액 구하기
         let finalPrice = originalTotal - discountedTotal;
         $("div#clacMain div.col4 span.price").text(finalPrice);
         
@@ -73,6 +73,7 @@ $(function(){
     function calcTotalOriginal() {
         let sum = 0;
         $("input.selectEach:checked").each(function(){
+            // 체크된 상품의 기본금액을 불러와서 sum변수에 축척
             let price = $(this).parent().parent().children("div.col5").children("p.original").text();
             price = price.replace(/\,/g, "");
             price = Number(price);
