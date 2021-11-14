@@ -253,7 +253,7 @@ $(function(){
 
     /* product_qna.html 목록버튼 - 상품리뷰 목록 페이지로 이동 */
     $("main#qnaMain button#toReviewList").click(function(){
-        window.location.href = "product_review.html";
+        // window.location.href = "product_review.html";
     });
 
     /* product_qna.html 취소버튼 - 이전버튼 이동 */
