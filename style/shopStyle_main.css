@@ -69,6 +69,8 @@ main#shopMain {
 }
 
 main#shopMain div#contentsList {
+  width: 1500px;
+  margin: 0 auto;
   margin-top: 10px;
   justify-content: space-evenly;
   flex-wrap: wrap;
