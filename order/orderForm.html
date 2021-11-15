@@ -75,7 +75,195 @@
         </header> <!-- header#header -->
         
         <main id="orderMain">
+            <h2>주문/결제</h2>
 
+            <div id="productInfo">
+                <div id="productInfoTop" class="flex">
+                    <div class="col1"><input type="checkbox"></div>
+                    <div class="col2">이미지</div>
+                    <div class="col3">상품정보</div>
+                    <div class="col4">판매가</div>
+                    <div class="col5">수량</div>
+                    <div class="col6">할인적용가</div>
+                    <div class="col7">적립금</div>
+                    <div class="col8">배송구분</div>
+                    <div class="col9">배송비</div>
+                    <div class="col10">합계</div>
+                </div> <!-- div#productInfoTop -->
+                <div id="productInfoList">
+                    <div class="listBox">
+                        <div class="col1"><input type="checkbox"></div>
+                        <div class="col2">
+                            <img src="/images/product_1.jpg" alt="">
+                        </div>
+                        <div class="col3">상품정보</div>
+                        <div class="col4">판매가</div>
+                        <div class="col5">수량</div>
+                        <div class="col6">할인적용가</div>
+                        <div class="col7">적립금</div>
+                        <div class="col8">배송구분</div>
+                        <div class="col9">배송비</div>
+                        <div class="col10">합계</div>
+                    </div>
+                </div> <!-- div#productInfoList -->
+                <div id="productInfoBottom" class="flex">
+                    <div class="col1"></div>
+                    <div class="col2">[기본배송]</div>
+                    <div class="col3" colspan="8">상품구매금액 <span id="price1">76000</span> + 배송비 <span id="deliveryPrice">3000</span> - 상품할인금액 <span id="price2">30,400</span> = 합계: <span id="price3">48600</span></div>
+                </div> <!-- div#productInfoBottom -->
+                <div id="alarmMsg"><span>!</span>상품의 옵션 및 수량 변경은 상품상세 또는 장바구니에서 가능합니다.</div> <!-- div#alarmMsg -->
+                <div id="deleteSelected">선택상품을 <button type="button" id="deleSelecBtn"> X 삭제하기</button></div> <!-- div#deleteSelected -->
+            </div> <!-- div#productInfo -->
+
+            <div id="priceInfo">
+                <p class="title">결제 예정 금액</p>
+                <div id="priceInfoTop" class="flex">
+                    <div class="col1">주문 금액</div>
+                    <div class="col2">배송비</div>
+                    <div class="col3">할인 금액</div>
+                    <div class="col4">총 결제 금액</div>
+                </div>
+                <div id="priceInfoContent" class="flex">
+                    <div class="col1">110000</div>
+                    <div class="col2">3000</div>
+                    <div class="col3">10000</div>
+                    <div class="col4">100000</div>
+                </div>
+                <div class="infoBox">
+                    <div>할인내역</div>
+                    <div>
+                        <ul>기본할인 : 34000원</ul>
+                    </div>
+                </div>
+                <div class="infoBox">
+                    <div>할인코드 적용</div>
+                    <div><input type="text"><button>적용</button></div>
+                </div>
+                <div class="infoBox">
+                    <div>쿠폰할인</div>
+                    <div><button>쿠폰적용</button>보유쿠폰 1개</div>
+                </div>
+                <div class="infoBox">
+                    <div>적립금</div>
+                    <div>
+                        <input type="text">원 (보유 적립금 : 0원 / 사용가능 적립금 : 0원)
+                        <ul>
+                            <li>적립금은 최소 0 이상일 때 결제가 가능합니다.</li>
+                            <li>1회 구매시 적립금 최대 사용금액은 0원입니다.</li>
+                            <li>적립금으로만 결제할 경우, 결제금액이 0으로 보여지는 것은 정상이며 [결제하기] 버튼을 누르면 주문이 완료됩니다.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div> <!-- div#priceInfo -->
+
+            <div id="senderInfo">
+                <p class="title">주문자 정보</p>
+                <div class="infoBox">
+                    <div>주문자</div>
+                    <div><input type="text"></div>
+                </div>
+                <div class="infoBox">
+                    <div>휴대전화</div>
+                    <div><input type="text"></div>
+                </div>
+                <div class="infoBox">
+                    <div>일반전화</div>
+                    <div><input type="text"></div>
+                </div>
+                <div class="infoBox">
+                    <div>이메일</div>
+                    <div>
+                        <input type="text">
+                        <p>이메일을 통해 주문처리과정을 보내드립니다.</p>
+                        <p>이메일 주소란에는 반드시 수신가능한 이메일주소를 입력해 주세요.</p>
+                    </div>
+                </div>
+            </div> <!-- div#senderInfo -->
+
+            <div id="receiverInfo">
+                <p class="title">배송지 정보</p>
+                <div class="infoBox">
+                    <div>배송지 선택</div>
+                    <div><input type="radio">주문자정보와 동일 <input type="radio">새로운 배송지 <button>주소록보기</button></div>
+                </div>
+                <div class="infoBox">
+                    <div>받으시는 분</div>
+                    <div>이름</div>
+                </div>
+                <div class="infoBox">
+                    <div>주소</div>
+                    <div><input type="text"></div>
+                </div>
+                <div class="infoBox">
+                    <div>휴대전화</div>
+                    <div><input type="text"></div>
+                </div>
+                <div class="infoBox">
+                    <div>일반전화</div>
+                    <div><input type="text"></div>
+                </div>
+                <div class="infoBox">
+                    <div>배송메시지</div>
+                    <div><textarea cols="30" rows="10"></textarea></div>
+                </div>
+            </div> <!-- div#receiverInfo -->
+
+            <div id="paymentInfo">
+                <p class="title">결제 수단</p>
+                <div class="inner flex">
+                    <div id="howToPay">
+                        <div><input type="radio">카드결제</div>
+                        <div>소액결제의 경우 PG사 정책에 따라 결제 금액 제한이 있을 수 있습니다.</div>
+                    </div>
+                    <div id="finalConfirm">
+                        <p>최종 결제 금액<br><span>48000</span>원</p>
+                        <button type="button">결제하기</button>
+                        <p>총 적립 예정 금액</p>
+                    </div>
+                </div>
+            </div> <!-- div#paymentInfo -->
+
+            <div class="extraMsg">
+                <p class="title">무이자 할부 이용안내</p>
+                <p class="subTitle">WindowXP 서비스팩2를 설치하신후 결제가 정상적인 단계로 처리되지 않는경우, 아래의 절차에 따라 해결하시기 바랍니다.</p>
+                <ul>
+                    <li>안심클릭 결제모듈이 설치되지 않은 경우 ActiveX 수동설치</li>
+                    <li>Service Pack 2에 대한 Microsoft사의 상세안내</li>
+                    <li>결제보안을 위한 KCP Active-X가 자동설치되지 않을경우 수동설치하시기 바랍니다</li>
+                </ul>
+                <p class="subTitle">아래의 쇼핑몰일 경우에는 모든 브라우저 사용이 가능합니다.</p>
+                <ul>
+                    <li>KG이니시스, KCP, LG U+를 사용하는 쇼핑몰일 경우</li>
+                    <li>결제가능브라우저 : 크롬,파이어폭스,사파리,오페라 브라우저에서 결제 가능<br>(단, window os 사용자에 한하며 리눅스/mac os 사용자는 사용불가)</li>
+                    <li>최초 결제 시도시에는 플러그인을 추가 설치 후 반드시 브라우저 종료 후 재시작해야만 결제가 가능합니다. <br>(무통장, 휴대폰결제 포함)</li>
+                </ul>
+                <p class="subTitle">세금계산서 발행 안내</p>
+                <ul>
+                    <li>부가가치세법 제 54조에 의거하여 세금계산서는 배송완료일로부터 다음달 10일까지만 요청하실 수 있습니다.</li>
+                    <li>세금계산서는 사업자만 신청하실 수 있습니다.</li>
+                    <li>배송이 완료된 주문에 한하여 세금계산서 발행신청이 가능합니다.</li>
+                    <li>[세금계산서 신청]버튼을 눌러 세금계산서 신청양식을 작성한 후 팩스로 사업자등록증사본을 보내셔야 세금계산서 발생이 가능합니다.</li>
+                    <li>[세금계산서 인쇄]버튼을 누르면 발행된 세금계산서를 인쇄하실 수 있습니다.</li>
+                </ul>
+                <p class="subTitle">부가가치세법 변경에 따른 신용카드매출전표 및 세금계산서 변경안내</p>
+                <ul>
+                    <li>변경된 부가가치세법에 의거, 2004.7.1 이후 신용카드로 결제하신 주문에 대해서는 세금계산서 발행이 불가하며</li>
+                    <li>신용카드매출전표로 부가가치세 신고를 하셔야 합니다.(부가가치세법 시행령 57조)</li>
+                    <li>상기 부가가치세법 변경내용에 따라 신용카드 이외의 결제건에 대해서만 세금계산서 발행이 가능함을 양지하여 주시기 바랍니다.</li>
+                </ul>
+                <p class="subTitle">현금영수증 이용안내</p>
+                <ul>
+                    <li>현금영수증은 1원 이상의 현금성거래(무통장입금, 실시간계좌이체, 에스크로, 예치금)에 대해 발행이 됩니다.</li>
+                    <li>현금영수증 발행 금액에는 배송비는 포함되고, 적립금사용액은 포함되지 않습니다.</li>
+                    <li>발행신청 기간제한 현금영수증은 입금확인일로 부터 48시간안에 발행을 해야 합니다.</li>
+                    <li>현금영수증 발행 취소의 경우는 시간 제한이 없습니다. (국세청의 정책에 따라 변경 될 수 있습니다.)</li>
+                    <li>현금영수증이나 세금계산서 중 하나만 발행 가능 합니다.</li>
+                </ul>
+            </div>
+
+            <div class="extraMsg">
+                <p class="title">결제방법 이용안내</p>
+            </div>
         </main> <!-- main#orderMain -->
 
         <footer id="footer">

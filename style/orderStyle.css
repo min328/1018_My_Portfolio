@@ -1,3 +1,388 @@
 @charset "UTF-8";
 @import url(reset.css);
 @import url(commonStyle.css);
+
+main#orderMain {
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+#orderMain h2 {
+  padding: 40px 0;
+  text-align: center;
+  font-size: 32px;
+}
+
+#orderMain p.title {
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/* productInfo start */
+
+#orderMain div#productInfo {
+  margin-bottom: 50px;
+}
+
+#productInfo div#productInfoTop {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+#productInfo div#productInfoTop > div,
+#productInfo div#productInfoList div.listBox > div {
+  text-align: center;
+}
+
+#productInfo div#productInfoTop > div {
+  font-size: 11px;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+#productInfo div#productInfoList div.listBox > div {
+  padding: 10px 0;
+}
+
+#productInfo div#productInfoList {
+  font-size: 16px;
+}
+
+#productInfo div#productInfoList div.listBox {
+  border-bottom: 1px solid #ccc;
+  display: flex;
+}
+
+#productInfo div.col1 {
+  width: 30px;
+}
+
+#productInfo div.col2 {
+  width: 100px;
+}
+
+#productInfo img {
+  width: 80px;
+  height: 80px;
+}
+
+#productInfo div.col3 {
+  flex: 1;
+}
+
+#productInfo div.col5 {
+  width: 60px;
+}
+
+#productInfo div.col4,
+#productInfo div.col6,
+#productInfo div.col7,
+#productInfo div.col8,
+#productInfo div.col9,
+#productInfo div.col10 {
+  width: 100px;
+}
+
+#productInfo div#productInfoList div.listBox div.col3 {
+  padding-left: 10px;
+  text-align: left;
+  font-weight: bold;
+}
+
+#productInfo div#productInfoList div.listBox div.col3,
+#productInfo div#productInfoList div.listBox div.col4,
+#productInfo div#productInfoList div.listBox div.col5,
+#productInfo div#productInfoList div.listBox div.col6,
+#productInfo div#productInfoList div.listBox div.col7,
+#productInfo div#productInfoList div.listBox div.col8,
+#productInfo div#productInfoList div.listBox div.col9,
+#productInfo div#productInfoList div.listBox div.col10 {
+  padding-top: 35px;
+}
+
+#productInfo div#productInfoBottom {
+  padding: 10px;
+  border-bottom: 2px solid #ccc;
+}
+
+#productInfoBottom div.col3 {
+  text-align: right;
+}
+
+#orderMain div#alarmMsg {
+  color: rgb(255, 64, 64);
+  padding: 15px 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#alarmMsg span {
+  display: inline-block;
+  width: 15px;
+  color: rgb(255, 64, 64);
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  margin-right: 5px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+#orderMain div#deleteSelected {
+  font-weight: bold;
+}
+
+#deleteSelected button {
+  color: #fff;
+  padding: 0 10px;
+  margin-left: 10px;
+  background-color: #777;
+  border: 1px solid #555;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+#orderMain div#priceInfo div.infoBox {
+  display: flex;
+}
+
+/* productInfo end */
+
+/* priceInfo start */
+#orderMain div#priceInfo {
+    margin-bottom: 50px;
+}
+
+#priceInfo div#priceInfoTop {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    justify-content: space-around;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+#priceInfo div#priceInfoContent {
+    border-bottom: 1px solid #ccc;
+    justify-content: space-around;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+#priceInfo div.infoBox:last-child {
+    border-bottom: 2px solid #ccc;
+}
+
+#priceInfo div#priceInfoTop > div,
+#priceInfo div#priceInfoContent > div {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+#priceInfo div.infoBox {
+    border-bottom: 1px solid #ccc;
+}
+
+#priceInfo div.infoBox > div {
+    padding: 10px;
+    font-size: 14px;
+}
+
+#priceInfo div.infoBox > div:first-child {
+    width: 120px;
+    border-right: 1px solid #ccc;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#priceInfo div.infoBox input {
+    margin-right: 5px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+#priceInfo div.infoBox button {
+    color: #fff;
+    padding: 2px 10px;
+    margin-right: 10px;
+    background-color: rgb(71, 71, 92);
+    border: 1px solid #fff;
+    border-radius: 3px;
+    font-size: 10px;
+}
+
+#priceInfo ul li {
+    padding-top: 5px;
+}
+
+#priceInfo ul li:first-child {
+    padding-top: 20px;
+}
+
+#priceInfo ul li::before {
+    content: "- ";
+}
+/* priceInfo end */
+
+/* senderInfo start */
+#orderMain div#senderInfo {
+    margin-bottom: 50px;
+}
+
+#senderInfo > div:last-child {
+    border-bottom: 2px solid #ccc;
+}
+
+#senderInfo div.infoBox {
+    display: flex;
+}
+
+#senderInfo div.infoBox > div {
+    padding: 10px;
+}
+
+#senderInfo div.infoBox {
+    border-top: 1px solid #ccc;
+}
+
+#senderInfo div.infoBox div:first-child {
+    width: 120px;
+    border-right: 1px solid #ccc;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#senderInfo div.infoBox div:last-child {
+    padding-left: 10px;
+}
+
+#senderInfo div.infoBox input {
+    padding-left: 10px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+/* senderInfo end */
+
+/* receiverInfo start */
+
+#orderMain div#receiverInfo {
+    margin-bottom: 50px;
+}
+
+#receiverInfo > div:last-child {
+    border-bottom: 2px solid #ccc;
+}
+
+#receiverInfo div.infoBox {
+    display: flex;
+}
+
+#receiverInfo div.infoBox > div {
+    padding: 10px;
+}
+
+#receiverInfo div.infoBox {
+    border-top: 1px solid #ccc;
+}
+
+#receiverInfo div.infoBox div:first-child {
+    width: 120px;
+    border-right: 1px solid #ccc;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#receiverInfo div.infoBox div:last-child {
+    padding-left: 10px;
+}
+
+#receiverInfo div.infoBox input {
+    padding-left: 10px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+/* receiverInfo end */
+
+/* paymentInfo start */
+
+#orderMain div#paymentInfo {
+    margin-bottom: 50px;
+}
+
+#paymentInfo div#howToPay {
+    border: 1px solid #ccc;
+    flex: 1;
+}
+
+#howToPay > div {
+    padding: 10px;
+}
+
+#howToPay > div:first-child {
+    border-bottom: 3px double #ccc;
+}
+
+#paymentInfo div#finalConfirm {
+    width: 250px;
+    border: 1px solid #ccc;
+    border-left: none;
+    text-align: center;
+}
+
+#finalConfirm p:first-child {
+    padding: 10px;
+    text-align: right;
+    font-weight: bold;
+}
+
+#finalConfirm button {
+    color: #fff;
+    width: 98%;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    text-align: center;
+    background-color: rgb(71, 71, 92);
+    cursor: pointer;
+}
+
+#finalConfirm p:last-child {
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+/* paymentInfo end */
+
+#orderMain div.extraMsg {
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    margin-bottom: 50px;
+}
+
+#orderMain div.extraMsg ul li {
+    color: #777;
+    margin-top: 2px;
+    font-size: 13px;
+}
+
+#orderMain div.extraMsg ul li::before {
+    content: "- ";
+}
+
+#orderMain div.extraMsg ul li {
+    padding-left: 15px;
+}
+
+#orderMain div.extraMsg p.subTitle {
+    color: #333;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
