@@ -247,4 +247,15 @@ $(function(){
         window.location.href = "/order/orderForm.html";
     })
 
+    /* listbox div.col2클릭 --> 상품상세페이지 이동 */
+    $("div.listBox div.col2").click(function(){
+        let product_serial = $(this).children("img").attr("src");
+        product_serial = product_serial.substr(8, 9);
+        if(product_serial == "product_1") {
+            window.location.href = "/shop/" + product_serial + ".html";
+        } else {
+            alert("현재 운영하지 않는 상세페이지 입니다.");
+        }
+    });
+    
 });

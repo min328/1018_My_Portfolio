@@ -73,7 +73,6 @@ main#cartMain {
 
 #cartList div.col3 {
   flex: 1;
-  cursor: pointer;
 }
 
 #cartList div.col4 {
