@@ -242,4 +242,9 @@ $(function(){
         }
     });
 
+    /* 상품주문페이지 이동 */
+    $("button#orderFinalBtn, button.orderThisBtn").click(function(){
+        window.location.href = "/order/orderForm.html";
+    })
+
 });

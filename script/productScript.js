@@ -378,5 +378,10 @@ $(function(){
         }
     });
 
+    /* buy now - 주문창 이동 */
+    $("button#buyNow").click(function(){
+        window.location.href = "/order/orderForm.html";
+    });
+
     
 });
