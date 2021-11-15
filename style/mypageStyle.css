@@ -154,6 +154,7 @@ cursor: pointer;
 }
 
 #myOrderMain div#listContentsArea p.title {
+    margin-bottom: 10px;
     font-size: 13px;
     font-weight: bold;
 }
