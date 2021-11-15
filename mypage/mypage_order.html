@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>계절식탁 MY PAGE</title>
+    <link rel="stylesheet" href="/style/mypageStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/script/commonScript.js"></script>
+    <script src="/script/mypageScript.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -68,6 +73,73 @@
                 </ul>
             </nav> <!-- nav#headerLnb -->
         </header> <!-- header#header -->
+        
+        <main id="myOrderMain">
+            <h2>주문내역</h2>
+            <div id="tabArea">
+                <button type="button" id="showOrdersBtn"  class="tab_selected">주문내역 조회(0)</button>
+                <button type="button" id="showOthersBtn">취소/반품/교환내역 조회(0)</button>
+            </div> <!-- div#tabArea -->
+
+            <div id="tabOptionArea">
+                <div id="orderListOptions">
+                    <select class="orderStatus">
+                        <option value="">전체 주문처리상태</option>
+                        <option value="">입금전</option>
+                        <option value="">배송준비중</option>
+                        <option value="">배송중</option>
+                        <option value="">배송완료</option>
+                        <option value="">취소</option>
+                        <option value="">교환</option>
+                        <option value="">반품</option>
+                    </select>
+                    <div class="periodOptions">
+                        <button type="button">오늘</button>
+                        <button type="button">1주일</button>
+                        <button type="button">1개월</button>
+                        <button type="button">3개월</button>
+                        <button type="button">6개월</button>
+                    </div> <!-- div#periodOptions -->
+                    <div class="dateOptions">
+                        <input type="date" class="date1" value=""> ~ <input type="date" class="date2" value="">
+                    </div>
+                    <button type="button" class="searchBtn">조회</button>
+                </div> <!-- div#orderList -->
+                <div id="otherListOptions">
+                    <div class="periodOptions">
+                        <button type="button">오늘</button>
+                        <button type="button">1주일</button>
+                        <button type="button">1개월</button>
+                        <button type="button">3개월</button>
+                        <button type="button">6개월</button>
+                    </div> <!-- div#periodOptions -->
+                    <div class="dateOptions">
+                        <input type="date" class="date1" value=""> ~ <input type="date" class="date2" value="">
+                    </div>
+                    <button type="button" class="searchBtn">조회</button>
+                </div> <!-- div#otherList -->
+            </div> <!-- div#tabOptionArea -->
+            <div id="noticeMsg">
+                <ul>
+                    <li>기본적으로 최근 3개월간의 자료가 조회되며, 기간 검색시 지난 주문내역을 조회하실 수 있습니다.</li>
+                    <li>주문번호를 클릭하시면 해당 주문에 대한 상세내역을 확인하실 수 있습니다.</li>
+                    <li>취소/교환/반품신청은 주문완료일 기준 7일 까지 가능합니다.</li>
+                </ul>
+            </div> <!-- div#noticeMsg -->
+            <div id="listContentsArea">
+                <p class="title">주문 상품 정보</p>
+                <div id="listHead" class="flex">
+                    <div class="col1">주문번호</div>
+                    <div class="col2">이미지</div>
+                    <div class="col3">상품정보</div>
+                    <div class="col4">수량</div>
+                    <div class="col5">상품구매금액</div>
+                    <div class="col6">주문처리상태</div>
+                    <div class="col7">취소/교환/반품</div>
+                </div>
+                <div id="listBody">주문내역이 없습니다.</div>
+            </div> <!-- div#listContentsArea -->
+        </main> <!-- main#myOrderMain -->
 
         <footer id="footer">
             <div id="linkLnb" class="flex">

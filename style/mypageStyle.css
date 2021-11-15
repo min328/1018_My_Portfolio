@@ -29,3 +29,158 @@ main div.menu p.sub {
 main div.menu:hover p.sub {
     color: #000;
 }
+
+
+/* my page order start */
+
+main#myOrderMain{
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+#myOrderMain h2 {
+    color: #000;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+#myOrderMain div#tabArea {
+    margin-bottom: 20px;
+}
+
+#tabArea button {
+    color: #aaa;
+    padding: 10px 30px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#tabArea button.tab_selected{
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
+#myOrderMain div#tabOptionArea {
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+#tabOptionArea > div {
+    display: flex;
+}
+
+#tabOptionArea div#otherListOptions {
+    display: none;
+}
+
+#tabOptionArea select.orderStatus {
+    height: 35px;
+    padding: 5px;
+    border: 1px solid #000;
+    margin-right: 10px;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#tabOptionArea select.orderStatus option {
+    font-weight: bold;
+}
+
+#tabOptionArea div.periodOptions button {
+height: 35px;
+padding: 5px;
+font-size: 12px;
+border: 1px solid #ccc;
+outline: none;
+background-color: #fff;
+cursor: pointer;
+}
+
+#tabOptionArea div.periodOptions button:hover {
+    background-color: rgba(238, 238, 238, 0.5);
+}
+
+#tabOptionArea div.dateOptions input {
+    height: 35px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    cursor: pointer;
+}
+
+#tabOptionArea div.dateOptions input:first-child {
+    margin-left: 10px;
+}
+
+#tabOptionArea button.searchBtn {
+    color: #000;
+    height: 35px;
+    padding: 5px;
+    margin-left: 10px;
+    border: 1px solid #aaa;
+    background-color: rgba(238, 238, 238, 0.5);
+    cursor: pointer;
+}
+
+#myOrderMain div#noticeMsg {
+    padding: 20px;
+    margin-bottom: 40px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background-color: rgba(238, 238, 238, 0.2);
+}
+
+#noticeMsg ul li {
+    color: #777;
+    padding-top: 2px;
+    font-size: 13px;
+}
+
+#noticeMsg ul li:first-child {
+    padding-top: 0;
+}
+
+#noticeMsg ul li::before {
+    content: "- ";
+}
+
+#myOrderMain div#listContentsArea p.title {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#listContentsArea div#listHead {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#listHead div.col3 {
+    width: 350px;
+}
+
+#listHead > div {
+    padding: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#listContentsArea div#listBody {
+    color: #aaa;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+  /* my page order end */
