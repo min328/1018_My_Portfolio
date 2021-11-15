@@ -1,5 +1,7 @@
 2021-11-15
 - my page 세부 페이지 생성
+- my page 세부 페이지 중 order 항목 완료
+- 주문 Form 페이지 시작, 레이아웃 및 css 70%완료
 
 2021-11-10~13
 - cart.html 레이아웃, css, jquery 
