@@ -179,6 +179,7 @@ cursor: pointer;
 #listContentsArea div#listBody {
     color: #aaa;
     height: 200px;
+    margin-bottom: 100px;
     line-height: 200px;
     text-align: center;
     font-size: 18px;
